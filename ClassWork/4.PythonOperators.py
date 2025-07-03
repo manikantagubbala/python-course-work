@@ -75,8 +75,9 @@ print("NOT IN:",'Darling' not in fav_movies)     #False
 print("IN:",'Badri' in fav_movies)               #True
 print(type(fav_movies))                          #list
 
-#6.IdenticalOperators
-#It can extists same path (is).
+#6.IdentityOperators
+#It can exits same path (is)
+#It can't exits same path (is not)
 
 m=[1,2,5,4]
 n=[1,2,5,4]
@@ -90,4 +91,15 @@ print(id(m))                #138796659265728
 print(id(n))                #138796657115008
 print(id(k))                #138796659265728
 
+
+#7.BitwiseOperators
+
+x=4                                 #Binary= 0 1 0 0
+y=6                                 #Binary= 0 1 1 0
+                                             
+print("AND(&):", x&y)               # 0 1 0 0 = 4
+print("OR(|):", x|y)                # 0 1 1 0 = 6
+print("XOR(^):", x^y)               # 0 0 1 0 = 2       Opposite reactions can be True
+print("NOT(~):", ~x)                #  [~n = -(n + 1)]
+print("NOT(~):", ~y)                #  [~n = -(n + 1)]
 
