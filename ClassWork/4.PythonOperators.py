@@ -42,4 +42,52 @@ print("Mul & Assign:",c)                 #Mul & Assign: 10
 c**=10               #10000000000=c
 print("Exponential & Assign:",c)         #Exponential & Assign: 10000000000
 
+#4.Logical Operators
+#4.1."AND" If All conditions are TRUE then only print TRUE Otherwise FALSE
+#4.2."OR" If one of the condition is TRUE then print TRUE Otherwise FALSE
+#4.1."NOT" If the statement is TRUE it prints FALSE If the statement is FALSE it prints TRUE 
+
+x=10 
+y=20
+print("AND : ",x==y and x<y)         #AND :  False
+print("OR : ",x==y or x<y)           #OR :  True
+print("NOT : ",not(x==y))            #NOT :  True
+
+#5.MemberhsipOperators
+#In this operator using "in" and "not in".It can be used in Senquential Datatypes : LISTS,TUPLE,SETS.
+#In-->Returns True if the value exists in the sequence
+#Not In-->.Returns True if the value does NOT exist in the sequence
+
+d = {
+    'name':'tarak',
+    'age':40,
+
+    'name':'arjun',
+    'age':41
+
+}
+print(type(d))                        #dict
+print("NOT IN:",'tarak' not in d)     #True
+print("IN:",'name' in d)              #True
+
+fav_movies = ["Darling","Temper","Businessman","Badri"]
+print("NOT IN:",'Darling' not in fav_movies)     #False
+print("IN:",'Badri' in fav_movies)               #True
+print(type(fav_movies))                          #list
+
+#6.IdenticalOperators
+#It can extists same path (is).
+
+m=[1,2,5,4]
+n=[1,2,5,4]
+print("IS:", m is n)            #False
+print("IS NOT:", m is not n)    #True
+
+k=m
+print("IS:",m is k)             #True
+
+print(id(m))                #138796659265728
+print(id(n))                #138796657115008
+print(id(k))                #138796659265728
+
 
