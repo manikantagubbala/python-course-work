@@ -54,3 +54,14 @@ print("title(Ab Cd) : ", c.title())                #title() :  I Can Improve My 
 print("swapcase(A-a, a-A) : ", c.swapcase())       #swapcase() :  I CAN IMPROVE My self
 
 
+#3. Search & Find Methods
+f="adityaMandala"
+print("find : ", f.find('a'))           #find :  0
+print("rfind : ", f.rfind('a'))         #rfind :  12
+print("find : ", f.find('x'))           #find :  -1
+#print("index : ", f.index('x'))        #error
+print("index : ", f.index('d'))         #index :  1
+print("rindex : ", f.rindex('d'))       #rindex :  9
+print("count : ", f.count('a'))         #count : 5
+
+
