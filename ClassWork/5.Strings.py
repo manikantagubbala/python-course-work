@@ -121,8 +121,15 @@ print("isnumeric() : ", '²'.isnumeric())            #isnumeric() :  True
 print("isnumeric() : ", '⅓'.isnumeric())            #isnumeric() :  True
 print("isnumeric() : ", '五'.isnumeric())           #isnumeric() :  True
 
+#5.7.Replace & Modify Methods
 
-
+print("replace(old,new) : ", f.replace('a', '@'))
+print("replace(old,new) : ", f.replace('ad', '@%'))
+print("maketrans() : ", f.maketrans('a', '@'))
+print(ord('a'))
+print(ord('@'))
+print("translate(table) : ", f.translate(str.maketrans('a', '@')))
+print("translate(table) : ", f.translate('str'.maketrans('ad', '@%')))
 
 
 
