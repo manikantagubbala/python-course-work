@@ -1,6 +1,6 @@
 #6.Lists.py
 
-#Creating Lists
+#6.1.Creating Lists
 print("............Creating Lists.............")
 l=[]
 l=[1,2,3,4,5]
@@ -9,7 +9,7 @@ print(list())
 l.append('apple')
 print(l)
 
-#List with Nested Lists
+#6.2.List with Nested Lists
 print("...........List with Nested Lists..........")
 l=[[1,2,3], {4,5,6}, (7,8,9), True, [1,'apple']]
 print(l)
@@ -17,7 +17,7 @@ print(list("Python"))
 list_from_tuple = list((1, 2, 3))
 print(list_from_tuple)
 
-#Accessing Elements in a List
+#6.3.Accessing Elements in a List
 print("........Accessing Elements in a List.........")
 fruits=["banana",'apple','orange',"pineapple","watermelon","kiwi"]
 print("Indexing[] : ", fruits[0])
@@ -46,8 +46,46 @@ print("Slicing[6] : ", f[::-1])
 print(fruits)
 print(f)
 
+#6.4.Adding Elements
 
+g=list("Python Programming Language")
+print("...........Adding Elements.......")
+print(len(g))
+print("Append() : ", fruits.append("cherry"))
+print(fruits)
+print("Insert() : ", fruits.insert(4,"mango"))
+print(fruits)
+print("Extend() : ", fruits.extend(["custard apple","guava"]))
+print(fruits)
 
+#6.5.Removing Elements
 
+print("......Removing Elements........")
+print("remove() : ", fruits.remove("kiwi"))
+print(fruits)
+print("pop() : ", fruits.pop(3))
+print(fruits)
+print("pop() : ", fruits.pop())
+print(fruits)
+#print("clear() : ", fruits.clear())
+print(fruits)
+del fruits[0]
+print(fruits)
+#del fruits
+#print(fruits)
 
+print("            ")
+print("            ")
+fruits.extend(["mango", "mango", "mango"])
+print("count() : ", fruits.count("mango"))
+print(fruits)
+fruits.pop()
+print(fruits)
+print("count() : ", fruits.count("mango"))
+print("reverse() : ", fruits.reverse())
+print(fruits)
 
+m=list("mani")
+print(m[::-1])
+print(m.reverse())
+print(m)
