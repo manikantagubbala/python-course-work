@@ -22,6 +22,9 @@ print("Membership : ", "2025" in s)                    # Membership :  True
 print("Membership : ", "mani" not in s)                # Membership :  True
 print("Membership : ", "bhuvana" in s)                 # Membership :  False
 
+fname="suryaprakasharao"
+print(len(fname))
+print("Slicing- var[] : ", fname[:])
 
 #5.2.Built-in String Functions
 #1. len() - Returns the length of the string.
@@ -170,3 +173,11 @@ print("partition() : ", "hello hi mani aditya eswar".partition(" "))            
 
 #5.10.Encoding & Decoding Methods
 print("..........Encoding & Decoding Methods.........")
+
+en="hello Hello नमते你好"
+de=b' caf\xc3\xa9 \xf0\x9f\x99\x82'
+print("Encode() : ", en.encode())
+print("Decode() : ", de.decode())
+
+
+print("Python".rjust(10, "-"))
