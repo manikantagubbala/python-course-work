@@ -10,3 +10,4 @@ print(b'Hello\xe0\xa4\xa8\xe0\xa4\xae\xe0\xa4\xb8\xe0\xa5\x8d\xe0\xa4\xa4\xe0\xa
 f="hello"
 encoded=f.encode("utf-8")
 print(encoded)
+print("Python".rjust(10, "-"))
