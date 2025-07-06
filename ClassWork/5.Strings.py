@@ -180,4 +180,3 @@ print("Encode() : ", en.encode())
 print("Decode() : ", de.decode())
 
 
-print("Python".rjust(10, "-"))
