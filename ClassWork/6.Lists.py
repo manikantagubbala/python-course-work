@@ -109,3 +109,8 @@ fruits.sort()                                       #it can change from acen to 
 print("sort() : ", fruits)                  #sort() :  ['apple', 'cherry', 'custard apple', 'mango', 'mango', 'mango', 'orange', 'oranges', 'watermelon']
 sorted(fruits)                                      #doesn't change original value
 print("sorted() : ", fruits)                #sorted() :  ['apple', 'cherry', 'custard apple', 'mango', 'mango', 'mango', 'orange', 'oranges', 'watermelon']
+print("max() : ", max(fruits))
+print("min() : ", min(fruits))
+fruits.append(0)
+print("fruits : ", fruits)              #fruits :  ['apple', 'cherry', 'custard apple', 'mango', 'mango', 'mango', 'orange', 'oranges', 'watermelon', 0]
+print("all() : ", all(fruits))          #all() :  False
