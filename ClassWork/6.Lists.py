@@ -89,3 +89,23 @@ m=list("mani")
 print(m[::-1])
 print(m.reverse())
 print(m)
+
+
+fruit=fruits.copy()                       #shallow copy
+print("fruits : ", fruits)                #fruits :  ['mango', 'mango', 'custard apple', 'cherry', 'watermelon', 'mango', 'orange', 'apple']
+print("copy() : ", fruit)                 #copy() :  ['mango', 'mango', 'custard apple', 'cherry', 'watermelon', 'mango', 'orange', 'apple']
+fruit.append("kiwi")
+print("fruit : ", fruit)               # fruit :  ['mango', 'mango', 'custard apple', 'cherry', 'watermelon', 'mango', 'orange', 'apple', 'kiwi']
+print("fruits : ", fruits)             # fruits :  ['mango', 'mango', 'custard apple', 'cherry', 'watermelon', 'mango', 'orange', 'apple']
+
+fr=fruits                       #deep copy
+fr.append("oranges")
+print("fr : ", fr)                  #fr :  ['mango', 'mango', 'custard apple', 'cherry', 'watermelon', 'mango', 'orange', 'apple', 'oranges']
+print("fruits : ", fruits)          #fruits :  ['mango', 'mango', 'custard apple', 'cherry', 'watermelon', 'mango', 'orange', 'apple', 'oranges']
+
+print("any() : ", any(fruits))
+print("all() : ", all(fruits))
+fruits.sort()                                       #it can change from acen to dec order
+print("sort() : ", fruits)                  #sort() :  ['apple', 'cherry', 'custard apple', 'mango', 'mango', 'mango', 'orange', 'oranges', 'watermelon']
+sorted(fruits)                                      #doesn't change original value
+print("sorted() : ", fruits)                #sorted() :  ['apple', 'cherry', 'custard apple', 'mango', 'mango', 'mango', 'orange', 'oranges', 'watermelon']
