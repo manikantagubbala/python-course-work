@@ -17,33 +17,48 @@ print(l)
 
 print("....operations on sets.......")
 m={1,4,72,81,54,64,91}
-print("sets{} : ", s)
-print("sets{} : ", m)
-print("Membership(1) : ", 1 not in s)
-print("Membership(2) : ", 11 not in s)
-print("Membership(3) : ", 81  in m)
-print("Membership(4) : ", 11 not in m)
-print("union : ", s | m)
-print("Union : ", s.union(m))
+print("sets{} : ", s)                                   #sets{} :  {0, 1, 2, 3, 4, 5, 7, 8, 9, 54, 28}
+print("sets{} : ", m)                                   #sets{} :  {64, 1, 81, 4, 54, 72, 91}
+print("Membership(1) : ", 1 not in s)                   #Membership(1) :  False
+print("Membership(2) : ", 11 not in s)                  #Membership(2) :  True
+print("Membership(3) : ", 81  in m)                     #Membership(3) :  True
+print("Membership(4) : ", 11 not in m)                  #Membership(4) :  True
+print("union : ", s | m)                                #union :  {0, 1, 2, 3, 4, 5, 64, 7, 8, 9, 72, 81, 54, 91, 28}
+print("Union : ", s.union(m))                           #Union :  {0, 1, 2, 3, 4, 5, 64, 7, 8, 9, 72, 81, 54, 91, 28}
+print("Intersection : ", s & m)
+print("Intersection : ", s.intersection(m))
+print("Difference : ", s - m)
+print("Difference : ", s.difference(m))
+print("symmetric : ", s ^ m)
+print("symmetric : ", s.symmetric_difference(m))
+m.update({3,98})
+print(m)
+s.intersection_update(m)
+print(s)
+print(m)
+print("Intersection : ", m & s)
 
 
 
 
 
-print("......Built in functions......")
-print("sets{} : ", m)
-print("length : ",len(m))   
-print("sorted : ", sorted(m))
-print("max : ", max(m))      
-print("min : ", min(m))   
-print("sum : ", sum(m))
 
-print("sets{} : ", s)  
-print("length : ",len(s))
-print("sorted : ", sorted(s))
-print("max : ", max(s))      
-print("min : ", min(s))   
-print("sum : ", sum(s))
 
-i=[1,2,3,'iu', False, 5+7j]
-print("sets{list to set} : ", set(i))
+
+#print("......Built in functions......")
+#print("sets{} : ", m)
+#print("length : ",len(m))   
+#print("sorted : ", sorted(m))
+#print("max : ", max(m))      
+#print("min : ", min(m))   
+#print("sum : ", sum(m))
+#
+#print("sets{} : ", s)  
+#print("length : ",len(s))
+#print("sorted : ", sorted(s))
+#print("max : ", max(s))      
+#print("min : ", min(s))   
+#print("sum : ", sum(s))
+
+#i=[1,2,3,'iu', False, 5+7j]
+#print("sets{list to set} : ", set(i))
