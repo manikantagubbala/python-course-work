@@ -103,3 +103,4 @@ print("XOR(^):", x^y)               # 0 0 1 0 = 2       Opposite reactions can b
 print("NOT(~):", ~x)                #  [~n = -(n + 1)]
 print("NOT(~):", ~y)                #  [~n = -(n + 1)]
 
+ 

@@ -45,20 +45,27 @@ print("Intersection : ", m & s)
 
 
 
-#print("......Built in functions......")
-#print("sets{} : ", m)
-#print("length : ",len(m))   
-#print("sorted : ", sorted(m))
-#print("max : ", max(m))      
-#print("min : ", min(m))   
-#print("sum : ", sum(m))
-#
-#print("sets{} : ", s)  
-#print("length : ",len(s))
-#print("sorted : ", sorted(s))
-#print("max : ", max(s))      
-#print("min : ", min(s))   
-#print("sum : ", sum(s))
+print("......Built in functions......")
+print("sets{} : ", m)
+print("length : ",len(m))   
+print("sorted : ", sorted(m))
+print("max : ", max(m))      
+print("min : ", min(m))   
+print("sum : ", sum(m))
 
-#i=[1,2,3,'iu', False, 5+7j]
-#print("sets{list to set} : ", set(i))
+print("sets{} : ", s)  
+print("length : ",len(s))
+print("sorted : ", sorted(s))
+print("max : ", max(s))      
+print("min : ", min(s))   
+print("sum : ", sum(s))
+
+i=[1,2,3,'iu', False, 5+7j]
+print("sets{list to set} : ", set(i))
+
+
+frozen = frozenset([1, 2, 3])
+print(frozen)
+
+l=[1,23,4]
+print(set(l))
