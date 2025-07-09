@@ -37,7 +37,7 @@ print("Dictionary{del} : ", d)
 
 #Dictionary Built-in Methods 
 print("Dictionary{} : ", d)
-print("default : ", d.get('age', 'attach'))
+print("set default : ", d.get('age', 'attach'))
 print("Dictionary{} : ", d)
 print("Keys() : ", d.keys())
 print("Values() : ", d.values())
@@ -55,4 +55,7 @@ mem={
 }
 print("NestedDictionary : ", mem)
 print(len(mem))
+
+
+print({'a': 17}.setdefault('a', 10))
 

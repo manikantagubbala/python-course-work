@@ -38,34 +38,72 @@ print(s)
 print(m)
 print("Intersection : ", m & s)
 
+print("sets{s} : ", s) 
+print("sets{m} : ", m) 
+s={1,3,5,2,9,7,6,99,89,100109}
+m={2,6,7,9,1,3}
+print(s)
+print(m)
+print("Subset: ", s.issubset(m))
+print("Subset: ", s <= m)
+print("Superset : ", s.issuperset(m))
+print("Superset : ", s >= m)
+
+
+s={1,2,3,4}
+m={1,5,6,7,8,9}
+print("sets{s} : ", s)
+s.update(m)
+print("update : ", s)               #update :  {1, 2, 3, 5, 6, 7, 9, 100109, 89, 99}
+
+print(m | s)                                 # {1, 2, 3, 5, 6, 7, 9, 100109, 89, 99}
+print("sets{s} : ", s)
+print("sets{m} : ", m)
+
+
+s={1,2,3,4,7}
+m={1,5,6,7,8,89}
+print(s & m)
+print("sets{s} : ", s)
+
+s.intersection_update(m)
+print("intersection_update(s) : ", s)
+print(m)
+
+s={1,2,3,4,7}
+m={1,5,6,7,8,89}
+print(s - m)
+print(s)                            #s={1,2,3,4,7}
+
+s.difference_update(m)
+print("difference_update(s) : ", s)  #{2, 3, 4}
 
 
 
 
 
 
+#print("......Built in functions......")
+#print("sets{} : ", m)
+#print("length : ",len(m))   
+#print("sorted : ", sorted(m))
+#print("max : ", max(m))      
+#print("min : ", min(m))   
+#print("sum : ", sum(m))
+#
+#print("sets{} : ", s)  
+#print("length : ",len(s))
+#print("sorted : ", sorted(s))
+#print("max : ", max(s))      
+#print("min : ", min(s))   
+#print("sum : ", sum(s))
+#
+#i=[1,2,3,'iu', False, 5+7j]
+#print("sets{list to set} : ", set(i))
 
-print("......Built in functions......")
-print("sets{} : ", m)
-print("length : ",len(m))   
-print("sorted : ", sorted(m))
-print("max : ", max(m))      
-print("min : ", min(m))   
-print("sum : ", sum(m))
 
-print("sets{} : ", s)  
-print("length : ",len(s))
-print("sorted : ", sorted(s))
-print("max : ", max(s))      
-print("min : ", min(s))   
-print("sum : ", sum(s))
-
-i=[1,2,3,'iu', False, 5+7j]
-print("sets{list to set} : ", set(i))
-
-
-frozen = frozenset([1, 2, 3])
-print(frozen)
-
-l=[1,23,4]
-print(set(l))
+#frozen = frozenset([1, 2, 3])
+#print(frozen)
+#
+#l=[1,23,4]
+#print(set(l))
