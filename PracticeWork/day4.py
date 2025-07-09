@@ -6,3 +6,25 @@ b.update({1,2})
 print(a)
 print(b)
 a.intersection_update(b)
+
+
+
+
+
+
+
+#g=input()
+#h=int(g,2)
+#print(h)
+
+#int(0b1001)
+#j=(0b1001)
+print(0b1001)
+print(bin(14))
+
+j={10,'false'}
+print('false' in j)
+
+r = range(3,8)
+print(list(range(6,10)))
+print(tuple(r))
