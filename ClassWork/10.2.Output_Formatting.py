@@ -12,3 +12,6 @@ print("Num:%d \nName:%s \nDOb:%2f" %(i, s, f))
 print(" ")
 print("f s t r i n g".center(75," "))
 print(f'Hello, I am {s}. I am {i} years old')
+
+print("formatting".center(25," "))
+print("i am {}. {} years old".format(s,i))
