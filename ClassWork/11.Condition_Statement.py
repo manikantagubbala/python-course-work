@@ -83,12 +83,21 @@ data={
     4:{'name': 'Venky', 'attempt_status' : True, 'python' : 40, 'sql' : 35},
 }
 
-stid=int(input("Enter Student Id : "))
+st_id=int(input("Enter student id : "))
 
-if data[stid]['attempt_status']:
-    total=data[stid]['python']+data[stid]['sql']
-    print(total)
+if data[st_id]['attempt_status'] :
+    total=(data[st_id]['python']+data[st_id]['sql'])/2
+    if total>90:
+        print(f'{data[st_id]['name']} got first rank')
+    elif total>75:
+        print(f'{data[st_id]['name']} got second rank')
+    elif total>=35:
+        print(f'{data[st_id]['name']} has passed')
+    else:
+        print(f'{data[st_id]['name']}, failed')
 
+else:
+    print("You are not attempt")    
 
 
 
