@@ -37,7 +37,7 @@
 n=int(input("Enter number : "))
 for i in range(n,0,-1):
     print(i)
-    if i==3:
+    if i==2:
         print("Stoped at 2")
         break
 else:
