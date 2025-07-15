@@ -1,0 +1,13 @@
+print(chr(99))
+print(ord('a'))
+print("lshift : ", 64<<3)
+print(3>>3)
+print(8>>3)
+print("Hello\nWorn\nld".splitlines())
+print("hello".encode("utf-8"))
+print(b'hello'.decode())
+print(b'Hello\xe0\xa4\xa8\xe0\xa4\xae\xe0\xa4\xb8\xe0\xa5\x8d\xe0\xa4\xa4\xe0\xa5\x87\xe4\xbd\xa0\xe5\xa5\xbd caf\xc3\xa9 \xf0\x9f\x99\x82'.decode())
+f="hello"
+encoded=f.encode("utf-8")
+print(encoded)
+print("Python".rjust(10, "-"))
