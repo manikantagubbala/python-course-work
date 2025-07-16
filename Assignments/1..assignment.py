@@ -1,10 +1,11 @@
-print("Zomato".center(25,"-"))
+print("Zepto Store".center(25,"-"))
 
-booking_id = input("Enter the Booking Id : ")
-item_name = input("Show Item Name : ")
-item_price = float(input("Show Item Price : "))
+bill_id = input("Enter the Booking Id : ")
+item_name = input("Enter Item Name : ")
+item_price = float(input("Enter Item Price : "))
+categories = input("Enter Categories : ").split(",")
 discount_price = float(input("Discount Price : "))
-delivery_distance = float(input("Show the distance : "))
+delivery_distance = float(input("Enter the distance : "))
 delivery_charges = int(input("Enter the Delivery Charges : "))
 delivery_boy_name = input("Enter Delivery Boy Name : ")
 delivery_contact = int(input("Contact Number : "))
@@ -12,7 +13,9 @@ delivery_location = input("Enter your Location : ")
 
 total_price = item_price - discount_price + delivery_charges 
 
-print("\nBooking ID : ",booking_id, "\nItem : ", item_name,"\nPrice : ", item_price)
+print(f'Available Categories in Store : {categories}')
+
+print("\Bill ID : ",bill_id, "\nItem : ", item_name,"\nPrice : ", item_price)
 
 print("Discount %2f" %(discount_price) + "%")
 
