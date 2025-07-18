@@ -44,6 +44,14 @@ for i in range(5):                                  #   * * * * *
         print("*",end=" ")                          #           *
     print()
 
+print("6.1".center(15," "))
+
+for i in range(5):
+    print(" "*i + " ",end=" ")
+    print("*"*(5-i) + " ",end=" ")
+    print()
+
+
 
 
 print("7".center(15," "))
@@ -108,4 +116,78 @@ for i in range(n):                                  #       *
 
 '''
 
+print("10".center(15," "))
 
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1 or j==0 or j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+print("10.1".center(15," "))
+
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1 or j==0 or j==n-1 or i==n//2:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+
+print("10.2".center(15," "))
+
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1 or j==0 or j==n-1 or i==n//2 or j==n//2:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+
+print("11--Z".center(15," "))
+#logic is sum(i+j)
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1 or i+j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+
+print("12--X".center(15," "))
+#logic is sum(i+j)
+for i in range(n):
+    for j in range(n):
+        if i==j or i+j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+
+print("13--I".center(15," "))
+
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1 or j==n//2:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+
+
+print("14--H".center(15," "))
+
+for i in range(n):
+    for j in range(n):
+        if j==0 or j==n-1 or i==n//2:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
