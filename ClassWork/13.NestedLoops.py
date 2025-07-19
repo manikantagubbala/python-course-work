@@ -231,17 +231,18 @@ print(total)
 '''
 total=0
 d={
-    'Milk':60,
-    'Rice':70,
-    'Oil':130,
-    'Wheat':40
+    'milk':60,
+    'rice':70,
+    'oil':130,
+    'wheat':40
 }
 
 while True:
-    product_name=input("Enter Products : ")
+    product_name=input("Enter Products : ").lower()
     if product_name=='0':
         break
     quantity=int(input("Enter Quantity :"))
+    total+=d[product_name] * quantity
 
-total+=d[product_name] * quantity
+
 print(f'Rs. {total}')
