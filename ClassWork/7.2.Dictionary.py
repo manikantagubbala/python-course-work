@@ -20,6 +20,7 @@ print("Dictionary{} : ", d)
 d.popitem()
 print("Remove : ", d)
 d.pop("age")
+print(d)
 print("Remove : ", d)
 d['city']='Draksharamam'
 print("Adding : ", d)
@@ -34,10 +35,10 @@ print("Dictionary{del} : ", d)
 #del d
 #print("Dictionary{del} : ", d)
 
-
 #Dictionary Built-in Methods 
+print()
 print("Dictionary{} : ", d)
-print("set default : ", d.get('age', 'attach'))
+print("set default : ", d.get('age',99))
 print("Dictionary{} : ", d)
 print("Keys() : ", d.keys())
 print("Values() : ", d.values())
