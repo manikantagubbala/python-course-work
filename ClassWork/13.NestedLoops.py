@@ -196,7 +196,7 @@ for i in range(n):
 print()
 print("Groceries : ".center(20," "))
 
-'''
+
 data = {
     1:{'name':'Rice','price':60},
     2:{'name':'Wheat Flour','price':45},
@@ -215,34 +215,32 @@ for i in data:
 
 items=list(map(int,input("Select your Products (1 2 3) : ").split()))
 
-print(items)
-
 total=0
 s=set()
 
 for i in items:
     if i not in s:
         c=items.count(i)
-        print(f'{data[i]['name']} - {data[i]['price']}')
+        print(f'{data[i]['name'].center(15," ")} - {data[i]['price']} * {c} = {data[i]['price' ] * c}')
         total+=data[i]['price']*c
         s.add(i)
-print(total)
-
-'''
-total=0
-d={
-    'milk':60,
-    'rice':70,
-    'oil':130,
-    'wheat':40
-}
-
-while True:
-    product_name=input("Enter Products : ").lower()
-    if product_name=='0':
-        break
-    quantity=int(input("Enter Quantity :"))
-    total+=d[product_name] * quantity
+print(f'Total Bill: Rs.{total}')
 
 
-print(f'Rs. {total}')
+#total=0
+#d={
+#    'milk':60,
+#    'rice':70,
+#    'oil':130,
+#    'wheat':40
+#}
+#
+#while True:
+#    product_name=input("Enter Products : ").lower()
+#    if product_name=='0':
+#        break
+#    quantity=int(input("Enter Quantity :"))
+#    total+=d[product_name] * quantity
+#
+#
+#print(f'Rs. {total}')
