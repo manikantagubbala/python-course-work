@@ -20,11 +20,24 @@
 #else:
 #    print(f'{ch} is not in name')
 
-products = ['cycle', 'mobile', 'watch', 'mouse']
-fitem=input("Enter you need product : ").split()
+#products = ['cycle', 'mobile', 'watch', 'mouse']
+#fitem=input("Enter you need product : ").split()
+#
+#for i in fitem:
+#    if i in products:
+#        print(f'{products.index(i)} {i}')
+#    else:
+#        print(f'{i} is not available.')
+#
 
-for i in fitem:
-    if i in products:
-        print(f'{products.index(i)} {i}')
+n=int(input("Enter Number: "))
+
+if n>1:
+    for i in range(2,n):
+        if n % i == 0:
+            print(f'{n} is not a Prime Number.')
+            break
     else:
-        print(f'{i} is not available.')
+        print(f'{n} is a Prime Number.')
+else:
+    print(f'{n} is not a Prime Number')
