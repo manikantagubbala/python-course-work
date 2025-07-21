@@ -14,13 +14,14 @@
 #else:
 #    print("Zero")
 
-#print("Leaf Year".center(30)," ")
-#year=int(input("Enter number : "))
-#if year%400==0 or year%4==0 and year%100!=0  :
-#    print(f'{year} is Leaf year')
-#else:
-#    print(f'{year} is not a Leaf year')
+print("Leaf Year".center(30)," ")
+year=int(input("Enter number : "))
+if year%400==0 or year%4==0 and year%100!=0  :
+    print(f'{year} is Leaf year')
+else:
+    print(f'{year} is not a Leaf year')
 
+    
 #print("Divisible".center(20," "))
 #num=int(input("Enter your number :"))
 #if num%5==0:
@@ -46,12 +47,13 @@
 #else:
 #    print("It is not a 3-digit number")
 
-#print("vowel".center(15," "))
-#s=input("Enter a character : ").lower()
-#if s=='a' or s=='e' or s=='i' or s=='o' or s=='u':
-#    print(f'{s} is vowel')
-#else:
-#    print(f'{s} is not a vowel.')
+print("vowel".center(15," "))
+s=input("Enter a character : ").lower()
+if s=='a' or s=='e' or s=='i' or s=='o' or s=='u':
+    print(f'{s} is vowel')
+else:
+    print(f'{s} is not a vowel.')
+
 
 #print(" ")
 #print("or".center(10," "))
@@ -129,9 +131,11 @@
 #else:
 #    print(f'{s} and {m} are not equal')
 
-print("Prime".center(10," "))
-n=int(input("Enter number : "))
-if n%2!=0 and n%n==0 and n!=1 or n==2:
-    print("Prime")
-else:
-    print("NP")
+
+
+#print("Prime".center(10," "))
+#n=int(input("Enter number : "))
+#if n%2!=0 and n%n==0 and n!=1 or n==2:
+#    print("Prime")
+#else:
+#    print("NP")
