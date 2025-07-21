@@ -80,4 +80,19 @@ n=int(input("Enter Number: "))
 #for i in range(5, n + 1, 5):
 #    print(i, end=" ")
 
+for i in range(2,n+1):
+    c=0
+    for j in range(2,i):
+        if i%j==0:
+            c+=1
+    if c==0:
+        print(f'{i} is Prime Number')
 
+c=0
+for i in range(2,n):
+    if n%i==0:
+        c+=1
+if c==0:
+    print(f'{n} is a Prime Number')
+else:
+    print(f'{n} is not a Prime Number')

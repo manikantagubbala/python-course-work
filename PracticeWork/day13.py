@@ -94,4 +94,5 @@ while True:
         break
     s.add(photo)
 
+s=str(s)
 print(s)
