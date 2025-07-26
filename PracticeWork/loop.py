@@ -94,7 +94,6 @@ while num1!=0:
 print(num)
 
 
-'''
 
 for i in range(5):
     for j in range(5-i):
@@ -105,3 +104,47 @@ for i in range(5):
 
 for i in range(5):
     print(" "*(5-i) + "*" * (2*i-1))
+
+
+for i in range(5):
+    for j in range(5-i-1):
+        print(" ",end=" ")
+    for k in range(2*i+1):
+        print("*",end=" ")
+    print()
+
+
+for i in range(1,5):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print()
+
+
+num=1
+for i in range(1,5):
+    for j in range(1,i+1):
+        print(num,end=" ")
+        num+=1
+    print()
+
+
+
+for i in range(1,5):
+    for j in range(1,5-i+1):
+        print(j,end=" ")
+    print()
+
+'''
+for i in range(1,5):
+    for j in range(5-i):
+        print(" ",end=" ")
+    for k in range(1,2*i+1):
+        print(k,end=" ")
+    print()
+
+n = 4
+for i in range(1, n+1):
+    print(" " * (n - i), end="")
+    for j in range(1, i+1):
+        print(j, end=" ")
+    print()
