@@ -47,6 +47,61 @@ while n>0:
     print(n)
     n-=1
 
-'''
+
 print("Find Sum of Prime Numbers up to N (Using for loop)")
 n=int(input("Enter num: "))
+sum=0
+for i in range(2,n):
+    c=0
+    for j in range(2,i):
+        if i%j==0:
+            c+=1
+    if c==0:
+        sum+=i
+print(sum)
+
+
+print("Find the Product of Digits of a Number (Using while loop)")
+n=input("Enter number: ")
+p=1
+for i in n:
+    p*=int(i)
+print(p)
+
+num=int(input("Enter number: "))
+pr=1
+while num>0:
+    digit = num % 10
+    pr *= digit
+    num //= 10
+print(pr)
+
+
+
+print("Print Numbers Divisible by Both 3 and 5 (Using for loop)")
+n=int(input("Enter number: "))
+for i in range(1,n+1):
+    if i%3==0 and i%5==0:
+        print(i)
+
+
+print("Find GCD of Two Numbers (Using while loop)")
+num=int(input("Enter number: "))
+num1=int(input("Enter number: "))
+gcd=[]
+while num1!=0:
+    num,num1 = num1,num%num1
+print(num)
+
+
+'''
+
+for i in range(5):
+    for j in range(5-i):
+        print(".", end=" ")
+    for k in range(2*i-1):
+        print("*", end=" ")
+    print()
+
+for i in range(5):
+    print(" "*(5-i) + "*" * (2*i-1))

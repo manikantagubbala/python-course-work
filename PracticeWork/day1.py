@@ -16,7 +16,7 @@ for i in n:
 print(ls)
 print(cs)
 
-'''
+
 
 print("ATM")
 stored_pin='1234'
@@ -30,3 +30,7 @@ for i in range(n):
           print("PIN Incorrect")
 else:
      print("ATM Blocked")
+
+'''
+
+print("Find Sum of Prime Numbers up to N (Using for loop)")
