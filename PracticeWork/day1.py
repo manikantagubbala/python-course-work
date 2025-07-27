@@ -34,3 +34,4 @@ else:
 '''
 
 print("Find Sum of Prime Numbers up to N (Using for loop)")
+print()
