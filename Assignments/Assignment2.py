@@ -10,6 +10,7 @@ for i in range(n):
         chat[name]=[(msg,i)]
 
 print(chat)
+print(chat.values())
 print(len(chat.values()))
 
 
@@ -30,6 +31,15 @@ def total_word(chat):
 def average_words():
     average=total_word(chat)/n
     print(f'Average words per message: {average:.2f}')
+
+def long_msg(chat):
+    for i in chat.values():
+        for msg,_ in i:
+            long=0
+            if long>len(msg.split()):
+                msg
+    print(f'Longest message in the chat: {msg}')
+
 
 while True:
     print("0.Exit")
@@ -64,3 +74,5 @@ while True:
         print(f'Total words in this chat: {total_word(chat)}')
     elif op==4:
         average_words()
+    elif op==5:
+        long_msg(chat)
