@@ -40,6 +40,19 @@ def long_msg(chat):
                 msg
     print(f'Longest message in the chat: {msg}')
 
+def most_user(chat):
+    l=0
+    user=""
+    for i in chat:
+        if l<len(chat[i]):
+            l=len(chat[i])
+            user=i
+    print(f'Most Active User in the chat: {user} ({l}messages)')
+
+def count_spf_user(chat):
+    name=input("Enter a specific user: ").capitalize()
+    if name in chat:
+        print(f'Message Count for Specific user: {len(chat[name])}')
 
 while True:
     print("0.Exit")
@@ -76,3 +89,7 @@ while True:
         average_words()
     elif op==5:
         long_msg(chat)
+    elif op==6:
+        most_user(chat)
+    elif op==7:
+        count_spf_user(chat)
