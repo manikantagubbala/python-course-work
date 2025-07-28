@@ -176,3 +176,11 @@ if is_square:
     print(f"{n} is perfect square")
 else:
     print(f"{n} is not perfect Square")
+
+
+n=int(input())
+s=0
+while n>0:
+    s+= (n%10)
+    n=n//10
+print(s)
