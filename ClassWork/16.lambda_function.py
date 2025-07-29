@@ -3,7 +3,6 @@ print()
 '''
 var = lambda args: statements
 var()
-'''
 
 s=sorted([(2,3),(4,1),(8,2)], key= lambda i:i[-1])
 print(s)
@@ -32,3 +31,44 @@ print(e)
 a=list(map(int,input().split()))
 c=list(map(lambda i:i+i,a))
 print(c)
+
+
+
+def evenorodd(n):
+    if n%2==0:
+        print("Even")
+    else:
+        print("Odd")
+evenorodd(int(input()))
+
+
+lam=lambda n:"Even" if n%2==0 else "Odd"
+print(lam(int(input("Enter num: "))))
+
+
+square=lambda n: n**2
+print(square(int(input("Enter num: "))))
+
+
+add=lambda n,m: n+m
+print(add(int(input("Enter num: ")),int(input("Enter num1: "))))
+
+
+max_num=lambda a,b:a if a>b else b
+print(max_num(int(input("Enter num: ")),int(input("Enter num1: "))))
+
+
+sub=lambda a,b: a-b
+print(sub(int(input("Enter num: ")),int(input("Enter num1: "))))
+'''
+
+def add(a,b):
+    print(a+b)
+add(23,456)
+
+#[1,2,3,4]==[0,2,6,12]
+n=[1,2,3,4]
+n+=1
+index=0
+ind=list(map(lambda i:i*n[0], n))
+print(ind)
