@@ -56,9 +56,10 @@ if name in c:
     print("msgs: ", len(c[name]))
 
 '''
-name="Alice"
-words=[]
-if name in c:
-    for i in c['Alice']:
-        words.append(i)
-print("words: ",words)
+print(c.values())
+count=0
+word={}
+for i in c.values():
+    for msg,_ in i:
+        print(msg.split())
+print("Words: ",word)

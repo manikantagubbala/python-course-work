@@ -25,3 +25,10 @@ s='python'
 st=list(map(lambda i:i, s))
 print(len(st))
 
+l=['hello','python']
+e=list(map(lambda i: len(i),l))
+print(e)
+
+a=list(map(int,input().split()))
+c=list(map(lambda i:i+i,a))
+print(c)

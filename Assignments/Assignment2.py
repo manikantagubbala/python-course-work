@@ -54,6 +54,19 @@ def count_spf_user(chat):
     if name in chat:
         print(f'Message Count for Specific user: {len(chat[name])}')
 
+def used_word(chat):
+    check=input("Enter specific name: ").capitalize()
+    most_word={}
+    if check in chat:
+        words=chat[check]
+        for msg,_ in words:
+            for i in msg.split():
+                if i not in most_word and i!=" ":
+                    most_word[i]=words.count(i)
+            print(most_word)
+  
+                
+
 while True:
     print("0.Exit")
     print("1. Count total number of messages: ")
@@ -93,3 +106,5 @@ while True:
         most_user(chat)
     elif op==7:
         count_spf_user(chat)
+    elif op==8:
+        used_word(chat)
