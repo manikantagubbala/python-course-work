@@ -68,7 +68,5 @@ add(23,456)
 
 #[1,2,3,4]==[0,2,6,12]
 n=[1,2,3,4]
-n+=1
-index=0
-ind=list(map(lambda i:i*n[0], n))
+ind=list(map(lambda i:i[0] * i[1], enumerate(n)))
 print(ind)
