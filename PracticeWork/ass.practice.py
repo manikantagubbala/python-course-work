@@ -61,4 +61,4 @@ words=[]
 if name in c:
     for i in c['Alice']:
         words.append(i)
-print("words: ",len(words))
+print("words: ",words)
