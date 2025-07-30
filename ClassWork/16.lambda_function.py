@@ -4,6 +4,9 @@ print()
 var = lambda args: statements
 var()
 
+'''
+
+'''
 s=sorted([(2,3),(4,1),(8,2)], key= lambda i:i[-1])
 print(s)
 
@@ -60,13 +63,43 @@ print(max_num(int(input("Enter num: ")),int(input("Enter num1: "))))
 
 sub=lambda a,b: a-b
 print(sub(int(input("Enter num: ")),int(input("Enter num1: "))))
-'''
+
 
 def add(a,b):
     print(a+b)
 add(23,456)
 
-#[1,2,3,4]==[0,2,6,12]
-n=[1,2,3,4]
-ind=list(map(lambda i:i[0] * i[1], enumerate(n)))
-print(ind)
+
+a=eval(input("Enter numbers: "))
+sq=list(map(lambda i:i*i ,a ))
+print(sq)
+
+
+a={1,2,3,4,5,5}
+f=set(filter(lambda i:i%2!=0,a))
+print("filter: ",f)
+
+
+a=[0,0,0,8,8,5,4,23,45,65,23,2,60,7,7,76,90,0,0,0,0,5,6,345,3,0]
+f=tuple(filter(lambda i:i!=0,a))
+print("Remove Zeroes: ",f)
+
+
+a=[1,2,3,4]
+f=list(map(lambda i:i+3,a))
+print(f)
+
+'''
+data={'Mani':85,'Aditya':75,'Eswar':728}
+s=dict(sorted(data.items(),key=lambda i:i[0]))
+print("Sorted data: ",s)
+
+students = [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
+so=sorted(students,key=lambda i:i[0])
+print(so)
+
+
+print(sorted(data.items()))
+
+a=list(map(int,input().split()))
+b=[1,2,3,4]
