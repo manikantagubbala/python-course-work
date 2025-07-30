@@ -89,7 +89,7 @@ a=[1,2,3,4]
 f=list(map(lambda i:i+3,a))
 print(f)
 
-'''
+
 data={'Mani':85,'Aditya':75,'Eswar':728}
 s=dict(sorted(data.items(),key=lambda i:i[0]))
 print("Sorted data: ",s)
@@ -103,3 +103,5 @@ print(sorted(data.items()))
 
 a=list(map(int,input().split()))
 b=[1,2,3,4]
+'''
+
