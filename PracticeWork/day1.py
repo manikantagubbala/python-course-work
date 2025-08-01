@@ -35,7 +35,7 @@ else:
 
 print("Find Sum of Prime Numbers up to N (Using for loop)")
 print()
-
+'''
 i=int(input("Enter number: "))
 if i>-10 and i<=9:
     print("Single digit ")
@@ -43,3 +43,14 @@ elif 10<=i<=99 or i<-9 or i<-100:
     print("Double digit")
 else:
     print("More tha double digit")
+
+
+'''
+
+
+#a=int(input("Enter number1: "))
+#b=int(input("Enter number2: "))
+#c=int(input("Enter number3: "))
+
+l=list(map(int,input().split()))
+print(sorted(l))

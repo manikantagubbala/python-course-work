@@ -125,8 +125,32 @@ print("Outside of the function: ",d)
 
 print("hello")
 
-def product(n,count):
-    if n==0:
-        return 1
-    return n%10 * product(n//10)
-print(product(int(input("Enter number: ")),0))
+#def product(n):
+#    if n==0:
+#        return 1
+#    return n%10 * product(n//10)
+#print(product(int(input("Enter number: "))))
+
+
+#def fac(n):
+#    if n==0:
+#        return 1
+#    return n * fac(n-1)
+#print(f'Factorial: {fac(5)}')
+
+
+#print("Reverse string: ")
+#def reverse(s,ind):
+#    if ind==len(s):
+#        return
+#    reverse(s,ind+1)
+#    print(s[ind],end='')
+#s='python'
+#reverse(s,0)
+
+#print("\nFibnoicc: ")
+#n,m=0,1
+#a=5
+#for i in range(5+1):
+#    print(m,end=" ")
+#    n,m=m,n+m
