@@ -30,6 +30,8 @@ print('Pass by value: \n')
 '''
 Pass by value can apply only immutable objects.(int, string, tuple, float)
 '''
+
+'''
 print("pass by value(int, float)")
 def pas(a):
     a=a+10
@@ -56,7 +58,8 @@ print("Outside of the function: ",t)
 
 print("Pass by reference: ")
 '''
-Pass by reference is only possible in immutable: (lists, sets, dictionary)
+#Pass by reference is only possible in immutable: (lists, sets, dictionary)
+
 '''
 
 print("pass by reference(list): ")
@@ -93,3 +96,37 @@ d={1:1,2:4,3:9}
 d[5]=25
 di_ref(d)
 print("Outside of the function: ",d)
+
+
+'''
+
+#def reverse(s,ind):
+#    if ind==len(s):
+#        return 
+#    reverse(s,ind+1)
+#    print(s[ind],end="")
+#s=input("Enter a string: ")
+#reverse(s,0)
+
+
+#n=123
+#s=0
+#while n>0:
+#    s+= (n%10)
+#    n=n//10
+#print("Sum of n: ",s)
+
+
+#def sumofdigit(n):
+#    if n==0:
+#        return n
+#    return n%10 + sumofdigit(n//10)
+#print(sumofdigit(int(input("Enter num: "))))
+
+print("hello")
+
+def product(n,count):
+    if n==0:
+        return 1
+    return n%10 * product(n//10)
+print(product(int(input("Enter number: ")),0))
