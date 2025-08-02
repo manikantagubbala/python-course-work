@@ -1,16 +1,20 @@
 print()
-def show(a):
-    for i in a:
-        st,en=i.split("to")
-        yield i
+def show(l):
+    for i in l:
+        st,end=i.split("..")
+        reelsOf_i=[i for i in range(int(st),int(end)+1)]
+        yield reelsOf_i
 
-reels=['1to100','101to200','301to400','401to500']
-n=show(reels)
-#print(next(n))
+reels=['1..100','101..200','201..300','301..400','401..500']
+nextfeed=show(reels)
 
 while True:
-    scroll_exit=input("Enter any ")
-    if scroll_exit=='c':
-        print(next(n))
+    scroll=input("[c]ontinue / [e]xit: ")
+    if scroll=='c':
+        print(next(nextfeed))
     else:
         break
+
+#def num(a):
+#    yield a+2
+#print(next(num(5)))

@@ -1,4 +1,4 @@
-'''
+
 print("Bill StatementL:".center(30," "))
 data={
     1:{'name':'Rice','price':60},
@@ -28,7 +28,7 @@ for i in items:
         s.add(i)
 print("Total Bill Amount: ",total)
 
-
+'''
 
 data={
     'Biryani':99,
@@ -73,7 +73,7 @@ for i in photos:
     if i not in s:
         print(f'{p[i]['photo']}{p[i]['.for']}')
         s.add(i)
-'''
+
 
 p={
     'img1':'beach.png',
@@ -96,3 +96,5 @@ while True:
 
 s=str(s)
 print(s)
+
+'''
