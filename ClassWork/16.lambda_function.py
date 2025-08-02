@@ -163,3 +163,11 @@ print("Add10OfListOfNum: ",add10)
 a=['hello','a','mani','cat']
 morethan3=list(filter(lambda i:len(i)>3,a))
 print("Filter strings longer than 3 characters: ",morethan3)
+
+a=[1,2,3,4,5,6,7,8,9]
+multiple3=list(filter(lambda i:i%3==0,a))
+print("MultipleOf3: ",multiple3)
+
+a=['hi','python','hello','p']
+sortByList=sorted(a,key=lambda i:len(i))
+print(sortByList)
