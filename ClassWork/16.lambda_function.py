@@ -105,3 +105,61 @@ a=list(map(int,input().split()))
 b=[1,2,3,4]
 '''
 
+#n=int(input())
+#s=lambda n:n*n
+#print(s(n))
+
+#Reduce in lambda
+a=[1,2,3,4,5]
+print("sumofnums: ",sum(a))
+
+
+#n=int(input("Enter number: "))
+#iseven=lambda n:True if n%2==0 else False
+#print("EvenOrOdd: ",iseven(n))
+
+maximum=lambda a,b:a if a>b else b
+print("maximunOfTwoNumbers: ",maximum(54,478))
+
+multiply=lambda a,b:a*b
+print("multiplyOfTwoNum: ",multiply(5,8))
+
+a=[(2,1),(43,4),(55,2)]
+sortOfList=sorted(a,key=lambda i:i[1])
+print("AscendingOrder: ",sortOfList)
+
+reverseSort=sorted(a,key=lambda i:i[1], reverse=True)
+print("descendingOrder: ",reverseSort)
+
+a=[1,2,3,4,5,6,67,7,8,9]
+evennum=list(filter(lambda i:i%2==0,a))
+print("EvenNumbers: ",evennum)
+
+square=list(map(lambda i:i*i,a))
+print("SquareOfNumbers: ",square)
+
+a=['hello','python']
+upper=list(map(lambda i:i.upper(),a))
+print("changeToUpper: ",upper)
+
+a=[{'name': 'A', 'age': 30}, {'name': 'B', 'age': 20}]
+order=sorted(a,key=lambda i:i['age'])
+print("AscendingOrderFromkeys: ",order)
+
+a='hello'
+length=lambda a:len(a)
+print("LengthOfTheString: ",length(a))
+
+stWithVowel=lambda a:True if a[0]=='a'or a[0]=='e' or a[0]=='i' or a[0]=='o' or a[0]=='u' else False
+print("StartWithVowelOrNot: ",stWithVowel(a))
+
+s=lambda a:True if a[0] in 'aeiou' else False
+print("StartWithVowelOrNot: ",s(a))
+
+a=[1,2,3,4,-5]
+add10=list(map(lambda i:i+10,a))
+print("Add10OfListOfNum: ",add10)
+
+a=['hello','a','mani','cat']
+morethan3=list(filter(lambda i:len(i)>3,a))
+print("Filter strings longer than 3 characters: ",morethan3)
