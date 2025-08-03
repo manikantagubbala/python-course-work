@@ -52,5 +52,8 @@ else:
 #b=int(input("Enter number2: "))
 #c=int(input("Enter number3: "))
 
-l=list(map(int,input().split()))
-print(sorted(l))
+#l=list(map(int,input().split()))
+#print(sorted(l))
+
+a=eval(input())
+print(set(a))
