@@ -55,5 +55,24 @@ else:
 #l=list(map(int,input().split()))
 #print(sorted(l))
 
-a=eval(input())
-print(set(a))
+'''
+a=list(map(str,input("Enter inputs: ").split()))
+print(a)
+d={}
+count=0
+for i in a:
+    if i not in d and i!=" ":
+        d[i]=a.count(i)
+    
+print(d)
+'''
+
+
+def dic_ount(text):
+    h={}
+    for i in text:
+        if i not in h and h!=" ":
+            h[i]=text.count(i)
+    return h
+text=input("Enter strings: ").split()
+print(dic_ount(text))
