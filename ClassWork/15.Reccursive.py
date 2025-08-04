@@ -148,11 +148,67 @@ print("hello")
 #s='python'
 #reverse(s,0)
 
-#print("\nFibnoicc: ")
-#n,m=0,1
-#a=5
-#for i in range(5+1):
-#    print(m,end=" ")
-#    n,m=m,n+m
+'''
+print("\nFibnoicc: ")
+n,m=0,1
+a=5
+for i in range(a+1):
+    print(m,end=" ")
+    n,m=m,n+m
+
+def fib(num):
+    if num<=0:
+        return 0
+    elif num==1:
+        return 1
+    return fib(num-1)+fib(num-2)
+    
+num=int(input("Enter number: "))
+for i in range(1,num+1):
+    print(fib(i),end=" ")
 
 
+def fac(n):
+    if n==0:
+        return 1
+    return n*fac(n-1)
+n=5
+print(fac(n))
+
+
+def reverse(s,i):
+    if i==len(s):
+        return 
+    reverse(s,i+1)
+    print(s[i],end='')
+s='apple'
+reverse(s,0)
+
+
+def count_digits(n):
+    if n==0:
+        return 0 
+    return 1+count_digits(n//10)
+print(count_digits(8978411298))
+
+
+def power(base,exp):
+    if exp==0:
+        return 1
+    return base**exp
+print(power(3,1))
+
+'''
+h=[24,18]
+print(max(h))
+
+def gcd(n,num):
+    m=[n,num]
+    a=[]
+    for i in range(1,max(m)+1):
+        if n%i==0 and num%i==0:
+            a.append(i) 
+    return max(a)
+n=int(input("Enter num: "))
+num=int(input("Enter num: "))
+print("GCD: ",gcd(n,num))
