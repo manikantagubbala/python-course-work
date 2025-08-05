@@ -198,7 +198,8 @@ def power(base,exp):
     return base**exp
 print(power(3,1))
 
-'''
+
+
 h=[24,18]
 print(max(h))
 
@@ -212,3 +213,14 @@ def gcd(n,num):
 n=int(input("Enter num: "))
 num=int(input("Enter num: "))
 print("GCD: ",gcd(n,num))
+
+'''
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+print(gcd(24,18))
+
+print(48 % 18)
