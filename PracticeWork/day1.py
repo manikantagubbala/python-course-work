@@ -174,7 +174,7 @@ bases=int(input("Enter num: "))
 exp=int(input("Enter num: "))
 print(power(bases,exp))
 
-'''
+
 
 def is_anagram(s1,s2):
     s1=s1.lower()
@@ -185,3 +185,4 @@ def is_anagram(s1,s2):
         return False
 s1,s2=input("Enter values: ").split()
 print(is_anagram(s1,s2))
+'''

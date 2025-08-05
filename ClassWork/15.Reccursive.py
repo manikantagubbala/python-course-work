@@ -243,5 +243,32 @@ def display(s,i):
 s='abcdefghi'
 display(s,0)
 
+
+def display(s,i):
+    if i==len(s) - sub+1:
+        return
+    print(s[i:i+sub],i)
+    display(s,i+1)
+s=input("Enter string: ")
+sub=int(input("Enter size you want: "))
+display(s,0)
+
+
+def take_list_of_items(l,ind):
+    if ind==len(l):
+        return
+    print(l[ind],end=" ")
+    take_list_of_items(l,ind+1)
+l=list(map(int,input("Enter values: ").split()))
+take_list_of_items(l,0)
+
 '''
 
+def take_items_from_tuple(t,ind):
+    if ind==len(t) + 1:
+        return
+    
+    print(t[ind])
+    take_items_from_tuple(t,ind+1)
+t=(1,2,3,4,5,6)
+take_items_from_tuple(t,0)
