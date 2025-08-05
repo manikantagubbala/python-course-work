@@ -214,7 +214,6 @@ n=int(input("Enter num: "))
 num=int(input("Enter num: "))
 print("GCD: ",gcd(n,num))
 
-'''
 
 def gcd(a, b):
     if b == 0:
@@ -224,3 +223,25 @@ def gcd(a, b):
 print(gcd(24,18))
 
 print(48 % 18)
+
+
+def nums(n):
+    if n==0:
+        return
+    nums(n-1)
+    print(n)
+nums(8)
+
+
+
+def display(s,i):
+    if i==len(s)+1:
+        return
+    print(s[:i],i)
+    display(s,i+1)
+
+s='abcdefghi'
+display(s,0)
+
+'''
+
