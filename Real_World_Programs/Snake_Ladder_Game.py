@@ -30,7 +30,7 @@ while player1_score < winning_point and player2_score < winning_point:
             print(f"\n{player1}'s turn: \nDice: {player1_turn} \n----Ladder----\n{player1} Board Position: {player1_score}")
         else:
             print(f"\n{player1}'s turn: \nDice: {player1_turn} \n{player1} Board Position: {player1_score}") 
-            
+
     elif player1_status == 'E':
         print(f"\n{player1} quit the Game \n {player2} Won the Game!!!!!!")
         sys.exit()
@@ -44,7 +44,7 @@ while player1_score < winning_point and player2_score < winning_point:
             player2_score = snakes[player2_score]
             print(f"\n{player2}'s turn: \nDice: {player2_turn} \n----Snake Bite----\n{player2} Board Position: {player2_score}")
         elif player2_score in ladders:
-            player2_score += ladders[player2_score]
+            player2_score = ladders[player2_score]
             print(f"\n{player2}'turn: \nDice: {player2_turn} \n----Ladder----\n{player2} Board Position: {player2_score}")
         else:
             print(f"\n{player2}'s turn: \nDice: {player2_turn} \n{player2} Board Position: {player2_score}")
