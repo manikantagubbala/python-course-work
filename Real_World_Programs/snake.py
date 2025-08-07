@@ -1,3 +1,4 @@
+'''
 import random
 import sys
 
@@ -68,3 +69,15 @@ else:
 
     
 
+'''
+
+import Snake_Ladder_Game as game
+
+while game.player1_score < game.winning_point and game.player2_score < game.winning_point:
+    game.first_player()
+    game.second_player()
+else:
+    if game.player1_score > game.player2_score:
+        print(f"\n\n\n{game.player1} Won the Game!!!!!!")
+    else:
+        print(f"\n\n\n{game.player2} Won the Game!!!!!!!")
