@@ -1,6 +1,7 @@
 #Collections.py
 import collections
 from collections import deque
+import itertools
 
 
 '''
@@ -57,6 +58,8 @@ print(d)
 #    d[i] += 1
 #print(d)
 
+'''
+
 print("----------Deque------------")
 
 #Stacks and Queues
@@ -93,3 +96,12 @@ queue.pop()
 queue.appendleft("c9")
 
 print("Ca_park: ",queue)
+
+'''
+
+#Itertools ==> combinations and Permutations
+#Combination of "abc",2  ==> ab ac bc
+#Permutations of "abc"2  ==> ab ac ba bc ca cb
+
+print(tuple(itertools.combinations("abc",2)))
+print(tuple(itertools.permutations("abc",2)))
