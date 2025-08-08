@@ -80,7 +80,7 @@ quiz={
         "b":"b) Parentheses ()",
         "c":"c) Indentation",
         "d":"d) Curly braces",
-        "answer":'c'
+        "answer":'c'    
     }
 }
 
