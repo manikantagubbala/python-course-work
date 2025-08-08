@@ -186,3 +186,6 @@ def is_anagram(s1,s2):
 s1,s2=input("Enter values: ").split()
 print(is_anagram(s1,s2))
 '''
+
+
+
