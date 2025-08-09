@@ -31,3 +31,14 @@ print(f"Hour: {current_date_time.hour} \nMinutes: {current_date_time.minute} \nS
 
 specific_date_time = datetime(2004,11,16,17,16,16)
 print("Specific Date&Time: ",specific_date_time)
+
+c_dt = datetime.now()
+formatted_date = c_dt.strftime("%d/%m/%Y")                      #%Y gives 2023 and %y gives 23
+print("Formatting the Date: ",formatted_date)
+formatted_time = c_dt.strftime("%H:%M:%S")
+print("Formatting the Time", formatted_time)
+print("Normal time in hour: ", c_dt.strftime("%I:%M %p"))
+print("Day with DayName: ", c_dt.strftime("%A"))
+print("Month with MonthName: ", c_dt.strftime("%B"))
+passing_year = date(2025,5,25)
+print("Passed Out Year in Btech: ",passing_year.strftime("%b,%Y"))
