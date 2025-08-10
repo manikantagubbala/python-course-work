@@ -5,6 +5,8 @@ import datetime
 to_day = datetime.date.today()
 t_ime = datetime.datetime.now()
 print(to_day, t_ime)
+
+'''
 '''
 
 from datetime import date, time, datetime
@@ -42,3 +44,24 @@ print("Day with DayName: ", c_dt.strftime("%A"))
 print("Month with MonthName: ", c_dt.strftime("%B"))
 passing_year = date(2025,5,25)
 print("Passed Out Year in Btech: ",passing_year.strftime("%b,%Y"))
+
+'''
+
+from datetime import date, time, datetime, timedelta
+
+yyyy = int(input("Enter a year: "))
+mm = int(input("Enter a Month: "))
+dd = int(input("Enter a date: "))
+dob = date(yyyy,mm,dd)
+#print("Day of the given date: ", dob.strftime("%A"))
+
+#print("Original date: ",dob)
+#print("Add 15 days to given date: ", dob + timedelta(days=15))
+
+hours = int(input("Enter hours: "))
+mintues = int(input("Enter minutes: "))
+seconds = int(input("Enter seconds: "))
+future_time = datetime(yyyy,mm,dd, hours,mintues,seconds)
+present_dt = datetime.now()
+
+print("Remaining time: ", present_dt - timedelta(future_time))
