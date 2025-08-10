@@ -5,8 +5,8 @@ class Instagram:
     def __init__(self,username,password):
         self.bio = ""
         self._likes = 0
-        self.followers = {}
-        self.following = {}
+        self.followers = []
+        self.following = []
         self.post = []
         self.username = username
         self.__password = password
@@ -24,11 +24,12 @@ class Instagram:
     #private
     def password_private(self):
         return self.__password
+    
     def update_password(self,new_pwd):
         self.__password = new_pwd
 
 #Object creation
-user_name = Instagram("mani_112", "M@ni1234",)
+user_name = Instagram("mani_112", "M@ni1234")
 
 print("Before modifying: ")
 print("Bio: ",user_name.bio)
@@ -38,9 +39,22 @@ print("Post: ",user_name.post)
 print("UserName: ",user_name.username)
 #print("Password: ",user_name.password)
 
+print("\nAfter Modifying: ")
+user_name.bio = "peace"
+user_name.followers.extend(['aditya','venky','eswar','surya'])
+user_name.following.extend(["jntr","priyanka","mani"])
+user_name.post.append("Normal.jpg")
+
+print("Bio: ",user_name.bio)
+print("Followers: ",user_name.followers)
+print("Following: ",user_name.following)
+print("Post: ",user_name.post)
+
+
 #private
 print("\nPassword: ", user_name.password_private())
-print("New Password: ", user_name.update_password("mani"))
+user_name.update_password("mani")
+print("New Password: ", user_name.password_private())
 
 #protected
 print("likes : ",user_name._likes)
