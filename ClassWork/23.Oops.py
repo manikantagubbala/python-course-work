@@ -24,11 +24,11 @@ class Instagram:
     #private
     def password_private(self):
         return self.__password
-    def update_password(self, new_pwd):
+    def update_password(self,new_pwd):
         self.__password = new_pwd
 
 #Object creation
-user_name = Instagram("mani_112", "M@ni1234")
+user_name = Instagram("mani_112", "M@ni1234",)
 
 print("Before modifying: ")
 print("Bio: ",user_name.bio)
