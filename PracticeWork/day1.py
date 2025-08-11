@@ -76,7 +76,7 @@ def dic_ount(text):
 text=input("Enter strings: ").split()
 print(dic_ount(text))
 
-'''
+
 
 def is_anagram(a,b):
     for i in a :
@@ -103,7 +103,8 @@ d='com'
 print(email(f,l,d))
 
 print()
-'''
+
+
 a=[[1,2],[3,4],[8]]
 b=[]
 c=[]
@@ -187,5 +188,5 @@ s1,s2=input("Enter values: ").split()
 print(is_anagram(s1,s2))
 '''
 
-
-
+friuts = ["apple","banana"]
+print(friuts[0])

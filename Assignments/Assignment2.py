@@ -10,6 +10,7 @@ for i in range(n):
         chat[name]=[(msg,i)]
 
 print(chat)
+print(chat.keys())
 print(chat.values())
 print(len(chat.values()))
 
@@ -21,7 +22,6 @@ def unique_users(chat):
     print(f'unique users in the chat: {set(chat.keys())}')
 
 def total_word(chat):
-    global length
     length=0
     for messages in chat.values():
         for msg, _ in messages:
@@ -36,7 +36,7 @@ def long_msg(chat):
     for i in chat.values():
         for msg,_ in i:
             long=0
-            if long>len(msg.split()):
+            if long>len(msg):
                 msg
     print(f'Longest message in the chat: {msg}')
 
@@ -53,19 +53,55 @@ def count_spf_user(chat):
     name=input("Enter a specific user: ").capitalize()
     if name in chat:
         print(f'Message Count for Specific user: {len(chat[name])}')
-
-def used_word(chat):
-    check=input("Enter specific name: ").capitalize()
-    most_word={}
-    if check in chat:
-        words=chat[check]
-        for msg,_ in words:
-            for i in msg.split():
-                if i not in most_word and i!=" ":
-                    most_word[i]=words.count(i)
-            print(most_word)
   
                 
+def first_and_last_msg(chat):
+    name = input("Enter the Name in the Chat: ").capitalize()
+    first_msg=[]
+    if name in chat:
+        for msg,i in chat[name]:
+            first_msg.append(msg)
+    print(f'First message by {name}: "{name}: {first_msg[0]}" ')
+    print(f'Last message by {name}: "{name}: {first_msg[len(first_msg) - 1]}" ')
+
+
+def user_is_present(chat):
+    name = input("Enter a specific Username: ").capitalize()
+    if name in chat.keys():
+        print(f"User '{name}' found in the chat.")
+    else:
+        print(f"User '{name}' not found in the chat.")
+
+
+def common_repeated_words(chat):
+    words=[]
+    for i in chat.values():
+        for msg,j in i:
+            word = msg.split()
+            words.append(word)
+
+    common = []
+    for i in words:
+        for j in i:
+            common.append(j)
+
+    repeated_words = {}
+    for i in common:
+        if i not in repeated_words:
+            repeated_words[i] = common.count(i)
+    print(max(repeated_words,key=repeated_words.get))
+
+
+def longest_avg_msg(chat):
+    for i in chat.values():
+        for msg,j in i:
+            long=0
+            if long>len(msg):
+                msg
+    longest_msg = [msg.split()]
+    print(len(longest_msg))
+
+
 
 while True:
     print("0.Exit")
@@ -106,5 +142,11 @@ while True:
         most_user(chat)
     elif op==7:
         count_spf_user(chat)
-    elif op==8:
-        used_word(chat)
+    elif op==9:
+        first_and_last_msg(chat)
+    elif op==10:
+        user_is_present(chat)
+    elif op==11:
+        common_repeated_words(chat)
+    elif op==12:
+        longest_avg_msg(chat)
