@@ -11,7 +11,7 @@ for i in range(n):
 
 print(chat)
 print(chat.keys())
-print(chat.values())
+print("Values: ", chat.values())
 print(len(chat.values()))
 
 
@@ -101,6 +101,35 @@ def longest_avg_msg(chat):
     longest_msg = [msg.split()]
     print(len(longest_msg))
 
+def count_messages_spec_user(chat):
+    name = input("Enter the specific Username: ").capitalize()
+    print(f"Messages mentioning '{name}': {len(chat[name])} ")
+
+
+def sort_messages(chat):
+    sort_msg = []
+    for i in chat.values():
+        for msg,j in i:
+            sort_msg.append(msg)
+    print(sorted(sort_msg))
+
+
+def question_msg(chat):
+    question = []
+    for i in chat.values():
+        for msg,j in i:
+            if msg[-1] == "?":
+                question.append(msg)
+    print(question)
+
+
+def deleted_messages(chat):
+    del_msg_count = 0
+    for i in chat.values():
+        for msg,j in i:
+            if msg=="This message was deleted":
+                del_msg_count += 1
+    print(f"Deleted messages found: {del_msg_count}")
 
 
 while True:
@@ -150,3 +179,13 @@ while True:
         common_repeated_words(chat)
     elif op==12:
         longest_avg_msg(chat)
+    elif op==13:
+        count_messages_spec_user(chat)
+    elif op==15:
+        sort_messages(chat)
+    elif op==16:
+        question_msg(chat)
+    elif op==18:
+        deleted_messages(chat)
+
+print("Remaining questions: 8,14,17")
