@@ -1,4 +1,5 @@
 print()
+'''
 def show(l):
     for i in l:
         st,end=i.split("..")
@@ -14,7 +15,28 @@ while True:
         print(next(nextfeed))
     else:
         break
+'''
 
-#def num(a):
-#    yield a+2
-#print(next(num(5)))
+'''
+def even_odd(n):
+    if n%2==0:
+        yield True
+    else:
+        yield False
+n=int(input())
+print(next(even_odd(n)))
+'''
+def even_odd_list(numbers):
+    for n in numbers:
+        yield n % 2 == 0
+
+nums = [2, 3, 4, 5]
+for result in even_odd_list(nums):
+    print(result)
+
+#
+
+def even(n):
+    yield n%2==0
+n=7
+print("\n",next(even(n)))
