@@ -9,6 +9,10 @@ for i in range(n):
     else:
         chat[name]=[(msg,i)]
 
+
+s={}
+
+
 print(chat)
 print(chat.keys())
 print("Values: ", chat.values())
