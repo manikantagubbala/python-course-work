@@ -1,5 +1,5 @@
 print()
-'''
+
 def show(l):
     for i in l:
         st,end=i.split("..")
@@ -15,7 +15,7 @@ while True:
         print(next(nextfeed))
     else:
         break
-'''
+
 
 '''
 def even_odd(n):
