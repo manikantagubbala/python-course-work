@@ -193,6 +193,8 @@ mani.Music()
 
 #Using Constructor
 
+'''
+
 class Maths:
     def __init__(self,grade):
         self.grade = grade
@@ -224,3 +226,43 @@ m3 = M3(grade)
 
 grade = input().upper()
 ps = PS(grade)
+
+'''
+
+#Using super keyword
+
+
+class Manikanta:
+    def maths_marks(self):
+        self.maths_marks = 'D'
+        print(f'\nManikanta Maths Grade - "{self.maths_marks}"')
+
+class Aditya(Manikanta):
+    def maths_marks(self):
+        super().maths_marks()
+        self.maths_marks = 'C'
+        print(f"Aditya Maths Grade - '{self.maths_marks}'")
+
+mani = Manikanta()
+mani.maths_marks()
+
+adi = Aditya()
+adi.maths_marks()
+
+
+#using super keyword in constructor
+'''
+class Manikanta:
+    def __init__(self):
+        self.maths = 'D'
+        print(f"\nManikanta maths grade '{self.maths}'")
+
+class Venky(Manikanta):
+    def __init__(self):
+        super().__init__()
+        self.maths = 'C'
+        print(f"Venky maths grade '{self.maths}'")
+
+mani = Manikanta()
+venky = Venky()
+'''
