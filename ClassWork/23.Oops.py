@@ -1,11 +1,4 @@
 #Object Oriented Programming Language
-#Class is blueprint & used to create objects
-#Object is a specific instance created from the class
-#Attributes(variables), it stores the data related to the object
-#Methods(functions), it defines behaviors or action the object can perform
-#Instances
-#Types of Instances 1.Instance, 2.Class, 3.Static
-
 
 #constructor
 
