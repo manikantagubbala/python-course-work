@@ -47,14 +47,16 @@ class Number:
         self.num = num
 
     def __add__(self,other):
-        self.other = other
         return self.num + other.num
     
     def __str__(self):
         return f"{self.num}"
 
+    
+
 n=Number(10)
 n1=Number(90)
+n2=Number(98)
 
-print(n + n1)
+print(n + n2)
 print(n)
