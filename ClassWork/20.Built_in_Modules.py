@@ -28,7 +28,7 @@ print("Degree: ", math.degrees(math.pi))
 print("Radians: ", math.radians(180))
 
 
-print("About your system: ", platform.system())
+print("\nAbout your system: ", platform.system())
 print("About sys version: ", platform.release())
 print("System Processor: ", platform.processor())
 

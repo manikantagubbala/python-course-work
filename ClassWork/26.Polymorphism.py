@@ -1,5 +1,19 @@
 #26.Polymorphism.py -->
 
+#1.Method Overloading (Compile-Time Polymorphism)-->same methods with different parameters
+
+class Method_overload:
+    def __init__(self,content=None):
+        self.content = content
+        return self.content
+
+
+obj = Method_overload()
+print(obj.__init__())
+print(obj.__init__("Manikanta"))
+print(obj.__init__([1,2,3,4,56]))
+
+
 #2.Method Overriding (Run-Time Polymorphism) --> same name and parameters but differnt actions
 
 class NormalUser:
@@ -42,21 +56,62 @@ aditya.comment()
 aditya.Share()
 
 
+#3. Operator overloading --> using operators with user defined methods
+
+
 class Number:
     def __init__(self,num):
         self.num = num
 
-    def __add__(self,other):
-        return self.num + other.num
-    
     def __str__(self):
-        return f"{self.num}"
+        return f"\nNumber: {self.num}"
 
+    def __add__(self,other):
+        return f"Addition: {self.num + other.num}"
     
+    def __sub__(self,other):
+        return f"Subtraction: {other.num - self.num}"
+    
+    def __mul__(self,other):
+        return f"Multiplication: {self.num * other.num}"
+    
+    def __truediv__(self,other):
+        return f"Division: {self.num / other.num}"
 
-n=Number(10)
-n1=Number(90)
-n2=Number(98)
+    def __lt__(self,other):
+        return f"Lessthen: {self.num < other.num}"
 
-print(n + n2)
-print(n)
+    def __gt__(self,other):
+        return f"Greaterthen: {self.num > other.num}"
+
+    def __floordiv__(self,other):
+        return f"FloorDivision: {self.num // other.num}"
+
+    def __mod__(self,other):
+        return f"Modulos: {self.num % other.num}"
+
+    def __pow__(self,other):
+        return f"Exponential: {self.num ** other.num}"
+
+    def __equal__(self,other):
+        return f"isEqual: {self.num == other.num}"
+
+
+num1 = Number(90)
+num2 = Number(20)
+
+print(num1)
+print(num1 + num2)
+print(num2 - num1)
+print(num1 * num2)
+print(num1 / num2)
+print(num1 < num2)
+print(num1 > num2)
+print(num1 // num2)
+print(num1 % num2)
+print(num1 ** num2)
+print(num1 == num2)
+
+
+
+
