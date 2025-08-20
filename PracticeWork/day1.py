@@ -186,7 +186,9 @@ def is_anagram(s1,s2):
         return False
 s1,s2=input("Enter values: ").split()
 print(is_anagram(s1,s2))
-'''
+
 
 friuts = ["apple","banana"]
 print(friuts[0])
+
+'''
