@@ -24,3 +24,24 @@ print(f'Distance : {delivery_distance} km \nDelivery Charges : {delivery_charges
 print("Contact Number : +91 {} \nLocation : {}".format(delivery_contact, delivery_location))
 
 print(f'Total Price : Rs.{total_price}')
+
+
+
+
+
+'''
+
+class -- ZeptoStore,  
+child_class -- Dmart, Reliance
+methods -- Groceries, Vegetables, Fruits
+attribute -- itemname, brand
+super() -- same items in both stores
+
+
+
+'''
+
+
+
+
+
