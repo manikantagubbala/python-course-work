@@ -1,8 +1,8 @@
 #email_auto.py
-import day1 as d
+import day1
 
 rec_mail = input("Enter an Email: ")
 subject = input("Enter Subject: ")
 body = input("Enter the Body: ")
 
-d.send_email(rec_mail, subject, body)
+day1.send_email(rec_mail, subject, body)
