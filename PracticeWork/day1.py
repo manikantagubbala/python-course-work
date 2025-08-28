@@ -226,7 +226,7 @@ def send_email(to_email, subject, body):
     except Exception as e:
         print(f"Error sending email to {to_email}: {e}") 
 
-
+ 
 def send_bulk_emails(csv_file, subject, body):
     try:
         csv_path = os.path.abspath(csv_file)
