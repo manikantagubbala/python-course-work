@@ -14,11 +14,3 @@ print(encoded)
 print("Python".rjust(10, "-"))
 
 '''
-
-a = [1,2,3,4,5]
-
-for i in a:
-    if i==3:
-        break
-else:
-    print("Code Completed")
