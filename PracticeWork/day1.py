@@ -227,15 +227,15 @@ def send_email(to_email, subject, body):
         print(f"Error sending email to {to_email}: {e}") 
 
  
-#def send_bulk_emails(csv_file, subject, body):
-#    try:
-#        csv_path = os.path.abspath(csv_file)
-#        if not os.path.exists(csv_path):
+#def send_bulk_emails(csv_file, subject, body):                                     
+#    try:                                                                       
+#        csv_path = os.path.abspath(csv_file)                                       
+#        if not os.path.exists(csv_path):                       
 #            print(f"Error: CSV file '{csv_file}' not found.")
-#            return
-#        
-#    except Exception as e:
-#        print(f" {e} ")
+#            return                                             
+#                                                               
+#    except Exception as e:                                                             
+#        print(f" {e} ")                                                            
 
 
 send_email("manikantag766@gmail.com", "Python", "You are the single.")

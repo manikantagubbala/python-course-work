@@ -31,8 +31,5 @@ def send_email(to_email, subject, body):
         print(f"Email sent to {to_email}")
 
     except Exception as e:
-        print(f"Error sending email to {to_email}: {e}") 
-
-
-
+        print(f"Error sending email to {to_email}: {e}")
 
