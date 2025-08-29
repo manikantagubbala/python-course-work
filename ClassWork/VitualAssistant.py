@@ -1,21 +1,22 @@
 # VitualAssistant.py
 
 # pip install pyttsx3 SpeechRecognition pyaudio     -->For install prompt
-import speech_recognition as sr
-import pyttsx3 
+import speech_recognition as sr         # it is used to convert the speak to text
+import pyttsx3                          # it is used to text to speak
+import webbrowser                       # it is used for default browser
 
-def listen():
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        print(" 🎤 Listening...")
-        recognizer.pause_threshold = 1
+def listen():                           # create a func using listen()
+    recognizer = sr.Recognizer()        # listen the audio from microphone or file
+    with sr.Microphone() as source:     # connects to your default microphone ,   source -->AudioSource
+        print(" 🎤 Listening...")   
+        recognizer.pause_threshold = 1  # it is like a time taken process
 
-        audio = recognizer.listen(source)
+        audio = recognizer.listen(source)   # record the voice and convert the audio to text
 
         try:
-            command = recognizer.recognize_google(audio,language= 'en-in')
+            command = recognizer.recognize_google(audio,language= 'en-in')      # audio lan is taken from english through google
             print("🔉 You said: ",command)
-            return command.lower()
+            return command.lower()                          # what we speak the words, it gives the words in text format in lowercase
         except sr.UnknownValueError:
             print("❌ Sorry, I didn't understand.")
             speak("Sorry, I didn't catch that.")
@@ -26,21 +27,24 @@ def listen():
             return ""
         
 
-engine = pyttsx3.init()
-def speak(text):
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[2].id)
-    engine.say(text)
-    engine.runAndWait()
+engine = pyttsx3.init()                         # intialize the python text to speech
+def speak(text):                        
+    voices = engine.getProperty('voices')       # there are diff voices installed(male, female), it should ask speech engine      
+    engine.setProperty('voice', voices[1].id)   # set the voice using index value(0,1)
+    engine.say(text)                            # we give the text
+    engine.runAndWait()                         # it will run th text, convert text to speech
 
 
 speak("Hello! I'm your virtual assistant. How can I help you?")
 
 while True:
     command = listen()
-
     if 'google' in command:
-        speak("Opening Google")
+        speak('opening google')
+        webbrowser.open('https://www.google.com/')
+
+    elif 'play music' in command:
+        speak("You can listen your music")
 
     elif 'stop' in command:
         speak("Okay!")
