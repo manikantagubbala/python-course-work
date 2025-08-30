@@ -30,10 +30,9 @@ def listen():                           # create a func using listen()
 engine = pyttsx3.init()                         # intialize the python text to speech
 def speak(text):                        
     voices = engine.getProperty('voices')       # there are diff voices installed(male, female), it should ask speech engine      
-    engine.setProperty('voice', voices[1].id)   # set the voice using index value(0,1)
+    engine.setProperty('voice', voices[0].id)   # set the voice using index value(0,1)
     engine.say(text)                            # we give the text
     engine.runAndWait()                         # it will run th text, convert text to speech
-
 
 speak("Hello! I'm your virtual assistant. How can I help you?")
 
