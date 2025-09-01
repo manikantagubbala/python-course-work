@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-'''
+
 # series
 
 prices = [199,5999,199,299,545]
@@ -11,10 +11,32 @@ products = ['phone','watch','cellphone','buds','shoes']
 product_prices = pd.Series(prices,index=products)
 print(product_prices)
 
-'''
+print(f'\n---Head of the products: \n{product_prices.head(2)}')
+
+print(f"\n---Tail of the products: \n{product_prices.tail(3)}")
+
+print(f'\n---Sum:  {sum(product_prices)}')
+
+print(f"\n---MinValue:  {min(product_prices)}")
+
+print(f"\n---MaxValue:  {max(product_prices)}")
+
+print(f"\n---Mean:  {product_prices.mean()}")
+
+print("\nApply: ", product_prices.apply(lambda i: f'₹{i - i*0.05}'))
+
+print("\nMap: ", product_prices.map(lambda i: f'₹{i}.00' ))
+
+print("\nSorted by Values: \n",product_prices.sort_values())
+
+print("\nSorted by index: \n",product_prices.sort_index())
+
+print("\nSorted descending order:\n",product_prices.sort_index(ascending=False))
+
+print("\nCount the values: \n",product_prices.value_counts())
 
 # DataFrames
-
+'''
 data = {
     "Product": ['shoes','mobile','mobile','ear buds','watch'],
     "Brand" : ['nike',"oppo","iphone","boat",'rolex'],
@@ -45,3 +67,5 @@ print("\n--Using loc (selecting particular row) based on cond:\n",df.loc[df['Pri
 print(df)
 print("\n",df.loc[df['BestSeller']==True])
 print("\n",df.loc[df["Product"]=='mobile'])
+
+'''

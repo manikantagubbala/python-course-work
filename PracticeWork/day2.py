@@ -15,8 +15,16 @@ print("Python".rjust(10, "-"))
 
 '''
 
+'''
 import math
 print(f"pow: {pow(3,4,5)}")
 ex = math.pow(3,4)
 print(f"power: {ex} \nmod: {ex % 5}")
+
+
+word = "gubbala bhuvana manikanta"
+n = " ".join(i.capitalize() for i in word.split())
+print(n)
+
+'''
 
