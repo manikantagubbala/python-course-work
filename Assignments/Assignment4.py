@@ -50,3 +50,69 @@ n = int(input("Enter a number: "))
 print(sum_of_nums(n))
 '''
 
+# 5.String Compression
+# Input: "aaabbcddd" → Output: "a3b2c1d3"
+'''
+def str_comp(word):
+    result = ""
+    for i in word:
+        if i not in result:
+            result += i + str(word.count(i))
+    return result 
+word = input("Enter a String: ")
+print(str_comp(word))
+
+'''
+
+# 6.Check Harshad (Niven) Number
+# A number divisible by the sum of its digits.
+# Example: 18 → 1+8=9 → 18%9=0 → Harshad
+'''
+def check_harsad(num):
+    sum = 0
+    while num>0:
+        digit = num % 10
+        sum += digit
+        num = num//10    
+    return sum
+num = int(input("Enter the number: "))
+if num % check_harsad(num) == 0:
+    print("Harshad")
+else:
+    print("Not Harshad")
+
+'''
+
+# 7.Check Strong Number
+# A number is strong if the sum of factorials of its digits equals the number.
+# Example: 145 → 1! + 4! + 5! = 145
+'''
+import math
+def check_strong_num(num):
+    sum_of_fact = 0
+    while num>0:
+        digit = num%10
+        sum_of_fact += math.factorial(digit)
+        num = num//10
+    return sum_of_fact
+num = int(input("Enter Number: "))
+if num == check_strong_num(num):
+    print(f"{num} is Strong Number.")
+else:
+    print(f"{num} is not a Strong Number.")
+'''
+# 8.Floyd’s Triangle
+# 1 
+# 2 3
+# 4 5 6
+# 7 8 9 10
+
+def floyd_pattern(rows):
+    start = 1
+    for i in range(1,rows+1):
+        for j in range(1,i+1):
+            print(start, end=" ")
+            start += 1
+        print()
+rows = int(input("Enter Range You want:\n"))
+floyd_pattern(rows)

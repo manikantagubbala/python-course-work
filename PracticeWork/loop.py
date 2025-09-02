@@ -59,7 +59,7 @@ for i in range(2,n):
     if c==0:
         sum+=i
 print(sum)
-
+'''
 
 print("Find the Product of Digits of a Number (Using while loop)")
 n=input("Enter number: ")
@@ -69,14 +69,14 @@ for i in n:
 print(p)
 
 num=int(input("Enter number: "))
-pr=1
+pr=0
 while num>0:
     digit = num % 10
-    pr *= digit
+    pr += digit
     num //= 10
 print(pr)
 
-
+'''
 
 print("Print Numbers Divisible by Both 3 and 5 (Using for loop)")
 n=int(input("Enter number: "))
@@ -134,7 +134,7 @@ for i in range(1,5):
         print(j,end=" ")
     print()
 
-'''
+
 for i in range(1,5):
     for j in range(5-i):
         print(" ",end=" ")
@@ -148,3 +148,4 @@ for i in range(1, n+1):
     for j in range(1, i+1):
         print(j, end=" ")
     print()
+'''
