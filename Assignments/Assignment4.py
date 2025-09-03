@@ -3,15 +3,14 @@
 # 1.Check Leap Year
 # Input: 2024 → Output: Leap Year.
 
-def check_leafYear():
+def check_leafYear(num):
     if num%400 == 0 and num%4 == 0 or num%100 != 0:
         print(f'Leaf Year')
     else:
         print("It is not a Leaf Year")
 
-num = int(input("Enter a number: "))
 
-'''
+
 # 2.Find Longest Word in a Sentence
 #Input: "Accenture hiring challenges" → Output: "challenges".
 
@@ -20,9 +19,8 @@ def longest_word(word):
     for i in word:
         long_word[i] = len(i)
     max(long_word, key=long_word.get)
-    print(f'Output: {longest_word(word)}')
+    return long_word
 
-word = input("Enter a Sentence: ").split()
 
 
 # 3.Count Frequency of Each Character in String
@@ -142,4 +140,3 @@ def count_vow_con(word):
 word = input("Enter the Word: ").lower()
 print(count_vow_con(word))
 
-'''
