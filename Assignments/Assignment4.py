@@ -70,14 +70,14 @@ def check_harsad(num):
         sum += digit
         num = num//10    
     return sum
-num = int(input("Enter the number: "))
 def check_niven():
+    num = int(input("Enter the number: "))
     if num % check_harsad(num) == 0:
         print("Harshad")
     else:
         print("Not Harshad")
 
-'''
+
 # 7.Check Strong Number
 # A number is strong if the sum of factorials of its digits equals the number.
 # Example: 145 → 1! + 4! + 5! = 145
@@ -91,13 +91,12 @@ def check_strong_num(num):
         sum_of_fact += math.factorial(digit)
         num = num//10
     return sum_of_fact
-num = int(input("Enter Number: "))
 def check_strong():
+    num = int(input("Enter Number: "))
     if num == check_strong_num(num):
         print(f"{num} is Strong Number.")
     else:
         print(f"{num} is not a Strong Number.")
-
 
 # 8.Floyd’s Triangle
 # 1 
@@ -105,32 +104,32 @@ def check_strong():
 # 4 5 6
 # 7 8 9 10
 
-def floyd_pattern(rows):
+def floyd_pattern():
+    rows = int(input("Enter Range You want:\n"))
     start = 1
     for i in range(1,rows+1):
         for j in range(1,i+1):
             print(start, end=" ")
             start += 1
         print()
-rows = int(input("Enter Range You want:\n"))
-
 
 # 9.Reverse a String without using built-in functions
 # Input: "hello" → Output: "olleh"
 
 
-def reverse_str(s):
+def reverse_str():
+    s = input("Enter the string: ")
     rev = ""
     for i in s:
         rev = i + rev
     print(rev)
-s = input("Enter the string: ")
 
 
 # 10.Count Vowels and Consonants in a String
 # Input: "python" → Vowels: 1, Consonants: 5
 
-def count_vow_con(word):
+def count_vow_con():
+    word = input("Enter the Word: ").lower()
     vowels = 'aeioiu'
     v = 0
     c = 0
@@ -139,8 +138,4 @@ def count_vow_con(word):
             v += 1
         else:
             c += 1
-    print(f'Vowels: {v}\nConsonants: {c}')
-word = input("Enter the Word: ").lower()
-print(count_vow_con(word))
-
-'''
+    return f'Vowels: {v}, Consonants: {c}'
