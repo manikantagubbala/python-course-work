@@ -38,6 +38,8 @@ print("\nCount the values: \n",product_prices.value_counts())
 # DataFrames
 '''
 
+
+'''
 data = {
     "Product": ['shoes','mobile','mobile','ear buds','watch'],
     "Brand" : ['nike',"oppo","iphone","boat",'rolex'],
@@ -163,3 +165,72 @@ print("\nCreate a Table: \n\n",df_pivot_table)
 #print("Given Data;\n",df)
 #df_cross_table = pd.crosstab(df["Brand"], df["Price"])
 #print("Create a Table '0' or '1'",df_cross_table)
+
+'''
+
+store_data = {
+    "Purchase Dates" : ['2024-01-15','2024-01-20','2024-02-05','2024-02-18','2024-03-10'],
+    "Product" : ["Laptop","Smartphone","Tablet","Smartwatch","Headphones"],
+    "Quantity" : [2,1,3,2,4]
+}
+
+df_sales = pd.DataFrame(store_data)
+print("Sales data;\n",df_sales)
+
+df_sales["Purchase Dates"] = pd.to_datetime(df_sales["Purchase Dates"])
+df_sales.set_index("Purchase Dates",inplace=True)
+print("Data can be change to original dates: \n",df_sales)
+
+# Report the data in daily 
+daily_avg = df_sales.resample("D").mean(numeric_only=True)
+print("\n----Daily Average----\n")
+print(daily_avg.head(15))
+
+# Report the data in Week
+weekly_avg = df_sales.resample("W").mean(numeric_only=True)
+print("\n---Weekly Average---\n")
+print(weekly_avg)
+
+# Report the data in month
+monthly_avg = df_sales.resample("ME").mean(numeric_only=True)           # we use 'M' or "ME", which is used in future version
+print("\n---Monthly Average---\n")
+print(monthly_avg)
+
+# Report the data in Quaterly
+Quaterly_avg = df_sales.resample("QE").mean(numeric_only=True)         # we use 'Q' or "QE", which is used in future version
+print("\n---Quaterly Average---\n")
+print(Quaterly_avg)
+
+# Report the data in Year
+yearly_avg = df_sales.resample("YE").mean(numeric_only=True)          # we use 'Y' or "YE", which is used in future version
+print("\n---Yearly Average---\n")
+print(yearly_avg)           # 2.4
+
+
+import numpy as np
+
+num_data = {
+    'A' : [1,2,np.nan, 4, 5],
+    'B' : [np.nan, 2, 3, np.nan, 5],
+    'C' : [10, np.nan, np.nan, 40, 50]
+}
+
+df_num_data = pd.DataFrame(num_data)
+print("Original dataframe with Missing Values:\n",df_num_data)
+
+# the Nan values fill with predictive values. using iterpolate
+df_interpolate = df_num_data.interpolate()
+print("\nDataframe after filling Nan values using interpolation:\n")
+print(df_interpolate)
+
+# Before "drop" the 'nan' values
+print(df_num_data)
+df_drop = df_num_data.dropna()
+print("\nDrop the rows filling with nan values:\nAfter DataFrame drop the rows: \n",df_drop)
+
+# fill with 0
+print(df_num_data)
+df_fill = df_num_data.fillna(0)
+print("\nDataFrame replace nan values with 0:\n",df_fill)
+
+# 
