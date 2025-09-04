@@ -233,4 +233,3 @@ print(df_num_data)
 df_fill = df_num_data.fillna(0)
 print("\nDataFrame replace nan values with 0:\n",df_fill)
 
-# 

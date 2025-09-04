@@ -40,3 +40,4 @@ print(f"It can give numbers (which are based on dimen array) from given range: \
 
 rand_float = np.random.rand(2,3)
 print(f"Float Values: \n{rand_float}\n")
+
