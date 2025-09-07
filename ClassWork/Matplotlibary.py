@@ -45,8 +45,9 @@ plt.show()
 
 '''
 
-# Histogram
 
+# Histogram
+'''
 marks = [45,55,60,72,68,80,90,55,67,70,
          85,40,60,75,78,82,95,50,62,65,
          58,73,77,69,71,88,92,55,63,59
@@ -58,11 +59,28 @@ plt.hist(marks,
          edgecolor="black",
          label="marks",
          histtype= "step",
-         
+#         density= "True"
          )
 
 plt.title("Distribution of Student Marks")
 plt.xlabel("Marks Range")
 plt.ylabel("Number of Students")
 plt.legend()
+plt.show()
+
+'''
+
+# Pie Chart
+
+hours = [1,2,3,5]
+apps = ["Whatsapp", "Youtube", "Instagram", "Chrome"]
+color = ["green", 'red', 'GOLD', 'Skyblue']
+
+plt.pie(hours,labels=apps,                      
+        colors=color, 
+        startangle=90,                          # pie chart angle st with 90
+        explode=[0.1,0,0,0]                     # pick the piece
+        )
+
+plt.title("Most Used Apps in Mobile")
 plt.show()
