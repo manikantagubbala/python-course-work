@@ -41,7 +41,7 @@ print(f"{index_val}\n")
 arr  = np.arange(1,21,1)
 mean = np.mean(arr)
 median = np.median(arr)
-print(f"{mean}\n{median}\n")
+print(f"Mean: {mean}\n{median}\n")
 
 
 # 8. Index of Maximum and Minimum
