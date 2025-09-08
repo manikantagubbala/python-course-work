@@ -14,7 +14,7 @@ print(f'"3 - Dim Array" :\n{arr3}\n')
 zeroes = np.zeros((2,4,5))                                          # (2,4,5) = (array, row, col)
 print(f"Zeroes: \n{zeroes}\n")
 
-one = np.ones((2,5))                                                # (2,5) = (row, col)
+one = np.ones((2,2,5))                                                # (2,5) = (row, col)
 print(f"Ones: \n{one}\n")
 
 id = np.eye(4,4)                                                    # (4,4) = (row, col)

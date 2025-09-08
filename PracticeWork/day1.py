@@ -33,7 +33,7 @@ else:
 
 '''
 
-print("Find Sum of Prime Numbers up to N (Using for loop)")
+#print("Find Sum of Prime Numbers up to N (Using for loop)")
 print()
 '''
 i=int(input("Enter number: "))
@@ -193,6 +193,8 @@ print(friuts[0])
 
 '''
 
+'''
+
 import smtplib      # Simple Mail Transfer Protocol for sending emails
 import os           # For file path and file existence checks
 import csv          # To read email addresses from a CSV file
@@ -239,3 +241,16 @@ def send_email(to_email, subject, body):
 
 
 send_email("manikantag766@gmail.com", "Python", "You are the single.")
+
+
+'''
+
+
+#def count_word(name):
+#    word = {}
+#    for i in name:
+#        word[i] = name.count(i)
+#    return word
+#name = "BHUVANA MANIKANTA GUBBALA GUBBALA BHUVANA MANIKANTA".split()
+#print(count_word(name))
+
