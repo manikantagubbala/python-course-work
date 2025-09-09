@@ -157,6 +157,7 @@ print("Mean: ", arr.mean())
 print("Median: ", np.median(arr))
 print("Standard Deviation: ", np.std(arr))
 
+
 '''
 # 10
 import matplotlib.pyplot as plt

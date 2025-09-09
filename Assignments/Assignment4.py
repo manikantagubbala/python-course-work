@@ -10,7 +10,6 @@ def check_leafYear(num):
         print("It is not a Leaf Year")
 
 
-
 # 2.Find Longest Word in a Sentence
 #Input: "Accenture hiring challenges" → Output: "challenges".
 
