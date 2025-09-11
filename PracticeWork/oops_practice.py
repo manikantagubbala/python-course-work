@@ -72,3 +72,4 @@ print("Result: ", obj.result())
 
 '''
 
+# Encapsulation

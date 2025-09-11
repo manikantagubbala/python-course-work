@@ -1,7 +1,7 @@
-#Encapsulaation
-#intilized in constructor
-# __is defined as private 
-# _is defined as protected
+# Encapsulaation
+# intilized in constructor
+# '__' is defined as private 
+# '_' is defined as protected
 import random
 
 
