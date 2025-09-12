@@ -1,27 +1,5 @@
 # Developing Zepto Store
 
-'''
-
----> Fruits 
-        -> Apple, Banana, Grapes, CustardApple, Papaya
----> Vegetables
-        -> Potato, Brinjal, Beetroot, Carrot, SweetPotato
----> Groceries
-        -> Rice, Oil, Atta, Ghee, Dals
-
-'''
-
-import random
-
-#class Deliver:
-#    def __init__(self, names):
-#        self.name = names
-#        print(random.choice(self.name))
-#
-#names = ["Praneeth", "Kamal", "Vimal", "Nihal", "Mohit"]
-#deliver_name = Deliver(names)
-
-
 
 class Product:
     """Base class for all products in the Zepto store"""
