@@ -1,5 +1,5 @@
 #27.Abstraction.py
-# Hide the data, ABC - Abstract Base Class
+# ABC - Abstract Base Class
 
 from abc import ABC,abstractmethod
 

@@ -231,7 +231,7 @@ ps = PS(grade)
 
 #Using super keyword
 
-
+'''
 class Manikanta:
     def maths_marks(self):
         self.maths_marks = 'D'
@@ -248,10 +248,10 @@ mani.maths_marks()
 
 adi = Aditya()
 adi.maths_marks()
-
+'''
 
 #using super keyword in constructor
-'''
+
 class Manikanta:
     def __init__(self):
         self.maths = 'D'
@@ -265,4 +265,3 @@ class Venky(Manikanta):
 
 mani = Manikanta()
 venky = Venky()
-'''

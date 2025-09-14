@@ -73,3 +73,51 @@ print("Result: ", obj.result())
 '''
 
 # Encapsulation
+# public
+class Hotel:
+    def __init__(self, name):
+        self.name = name
+    
+obj = Hotel("Biryani")
+print(f"{obj.name} is an item of Bawarchi")
+
+obj.name = "Chicken Biryani"
+print(f"\nAfter Modifying \n{obj.name} is an item of Bawarchi")
+
+# private
+class Resaturant:
+    def __init__(self, price):
+        self.__price = price
+    
+    def getprice(self):
+        return self.__price
+
+    # modify
+    def updateprice(self, newprice):
+        self.__price = newprice
+
+hababi = Resaturant(199)
+print(f"\n(Private method) Biryani Price : ₹.{hababi.getprice()}")
+
+hababi.updateprice(149)
+print(f"\nAfter Modifying \nBiryani Price : ₹.{hababi.getprice()}")
+
+
+# protected
+class Tiffin:
+    @property
+    def kitchen(self):
+        self._item = item
+        return self._item
+    
+    # modify
+    @kitchen.setter
+    def kitchens(self):
+        self._item = newitem
+
+item = "Dosa"    
+taza = Tiffin()
+print(f"\n(Protected) {taza.kitchen} is an item of Taza Kitchen")
+
+newitem = "Karamdosa"
+print(f"\nAfter Modifying \n{taza.kitchens} is an item of Taza Kitchen")

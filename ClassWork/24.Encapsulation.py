@@ -1,4 +1,4 @@
-# Encapsulaation
+# Encapsulaation, hide the data
 # intilized in constructor
 # '__' is defined as private 
 # '_' is defined as protected
