@@ -27,7 +27,7 @@ for i in range(5):
         print('*',end=" ")
     print()
 
-'''
+
 print()
 n=int(input("Enter size: "))
 for i in range(n):
@@ -52,6 +52,8 @@ for i in range(n):
     print()
     
 
+
+'''
 t=int(input("Enter total Bill:"))
 if t>=0 and t<=999:
     print(f'Total Bill: {t}')
@@ -113,7 +115,8 @@ for i in l:
     else:
         price+=120
 print(price)
-'''
+
+
 
 n=int(input("Enter seats: "))
 s=[]
@@ -131,3 +134,4 @@ for i in range(b):
         s.remove(choose)
 print(f'Booked Seats: {b_seats}')
 print(f'Available Seats: {s}')
+'''

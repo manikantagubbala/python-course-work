@@ -99,8 +99,16 @@ y=6                                 #Binary= 0 1 1 0
                                              
 print("AND(&):", x&y)               # 0 1 0 0 = 4
 print("OR(|):", x|y)                # 0 1 1 0 = 6
-print("XOR(^):", x^y)               # 0 0 1 0 = 2       Opposite reactions can be True
+print("XOR(^):", x^y)               # 0 0 1 0 = 2           Opposite reactions can be True
 print("NOT(~):", ~x)                #  [~n = -(n + 1)]
 print("NOT(~):", ~y)                #  [~n = -(n + 1)]
 
- 
+
+#   0 1 0 1
+#   1 0 1 
+#   16 8 4 2 1
+#   1 0 1 0 0
+#       1 0 1
+
+print("Right Shift: ",20 >> 2)
+print("Left Shift: ",5 >> 1)
