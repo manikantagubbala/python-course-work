@@ -42,7 +42,7 @@ for row in range(1,n):
         print(row, end = " ")
     print()
 
-print("\nPattern - 3")
+print("\nRightAngleTriangle - Pattern - 3")
 for row in range(1, n):
     for col in range(row):
         print("*", end=" ")
@@ -127,7 +127,7 @@ for row in range(n):
     print()
 
 
-print("\nPattern - 10")
+print("\nOne - Pattern - 10")
 for row in range(n):
     for col in range(n):
         if row == n-1 or col == n//2 or (row <= n//2 and (row+col == n//2)):
@@ -135,3 +135,115 @@ for row in range(n):
         else:
             print(" ", end=" ")
     print()
+
+print("\nTriangle - Pattern - 11")
+for row in range(n):
+    for col in range(2*n -1):
+        if row == n-1 or (col<=n-1 and row+col == n-1) or (col >= n and col-row == n-1):
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+
+
+print("\nPattern - 12")
+for row in range(n):
+    for col in range(n):
+        if (row+col) % 2 == 0:
+            print("0", end=" ")
+        else:
+            print("1", end=" ")
+    print()
+
+print("\nInverted right-angled triangle - Pattern - 13")
+for row in range(n):
+    for col in range(n - row):
+        print("*", end=" ")
+    print()
+
+
+print("\nReverse Pyramid - Pattern - 14")
+for row in range(n):
+    for spa in range(row):
+        print(" ", end="")
+    for col in range(n - row):
+        print("*", end=" ")
+    print()
+
+
+print("\nPyramid - Pattern - 15")
+for row in range(n+1):
+    for spa in range(n - row):
+        print(" ", end="")
+    for col in range(row):
+        print("* ", end="")
+    print() 
+
+
+print("\Floyd’s Triangle - Pattern - 16")
+nums = 1
+for row in range(n):
+    for num in range(row + 1):
+        print(nums, end=" ")
+        nums += 1
+    print()
+
+print("\nPascal’s Triangle - Pattern - 17")
+for row in range(n+1):
+    for spa in range(n - row):
+        print(" ", end="")
+    number = 1
+    for num in range(row + 1):
+        print(f'{number} ', end="")
+        number = number * (row - num) // (num + 1)
+    print()
+
+
+print("\nInverted number - Pattern - 18")
+for row in range(1,n):
+    for col in range(1, n - row + 1):
+        print(col, end=" ")
+    print()
+
+'''
+Diamond pattern:
+   *
+  * *
+ * * *
+* * * *
+ * * *
+  * *
+   *
+
+Hourglass pattern:
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+
+Palindromic number triangle:
+    1
+   121
+  12321
+ 1234321
+123454321
+
+Butterfly pattern:
+*       *
+* *   * *
+* * * * *
+* *   * *
+*       *
+
+Checkerboard pattern:
+* * * * 
+ * * * *
+* * * *
+ * * * *
+
+'''
