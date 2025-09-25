@@ -300,6 +300,7 @@ b1.display_info()
 
 '''
 
+'''
 class Account:
     def __init__(self, account_holder, pin):
         self.account_holder = account_holder
@@ -333,3 +334,91 @@ acc1 = Account(input("Enter Account Holder Name: "), int(input("Enter a 4 digit 
 acc1.deposit(int(input("Enter Deposit Amount: ")))
 acc1.withdraw(int(input("Enter Your pin:")), int(input("Enter Withdraw Amount: ")))
 acc1.show_balance()
+
+'''
+
+'''
+import random
+otp = random.randrange(1000,9999)
+print(f"OTP send to your Mobile Number '{otp}'")
+class User:
+    def login(self,mobileNo, OTP):
+        self.mobileNo = mobileNo
+        self.otp = OTP
+        if otp == self.otp:
+            print("User Login in")
+        else:
+            print("Login Failed")
+
+class Rider(User):
+    def book_ride(self):
+        print(f"Ride booked successfully")
+
+class Payment(Rider):
+    def make_payment(self):
+        print("Payment Completed")
+
+
+ride = Payment()
+ride.login(int(input("Enter Mobile Number: ")), int(input("Enter Your OTP: ")))
+ride.book_ride()
+ride.make_payment()
+
+'''
+
+'''
+class Person:
+    def __init__(self, name, age):
+        self.name = name 
+        self.age = age
+
+class Teacher(Person):
+    def __init__(self, name, age, subject):
+        super().__init__(name, age)
+        self.subject = subject
+    
+    def show(self):
+        print(f"Name: {self.name}, Age: {self.age}, Subject: {self.subject}")
+
+t = Teacher("Sai", 22, "Math")
+t.show()
+'''
+
+'''
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+    def display(self):
+        print(f"Sum: ({self.x}, {self.y})")
+
+p1 = Point(1,2)
+p2 = Point(3,4)
+p3 = p1 + p2
+p3.display()
+'''
+
+from abc import ABC, abstractmethod
+
+class Notification(ABC):
+    @abstractmethod
+    def send(self):
+        pass
+
+class EmailNotification(Notification):
+    def send(self):
+        self.email = "bmanikanta@gmail.com"
+        print(f"Email sent to {self.email}")
+
+class SMSNotification(EmailNotification):
+    def send(self):
+        print("SMS sent to registered number")
+
+e = EmailNotification()
+s = SMSNotification()
+e.send()
+s.send()
