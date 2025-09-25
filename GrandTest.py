@@ -25,7 +25,6 @@ for i in range(2,num):
         count.append(i)
 print(len(count))
 
-'''
 
 # Patterns
 n = 5
@@ -79,6 +78,7 @@ for row in range(1, n+1):
 #        print()    
 
 '''
+'''
 n = int(input("Enter number of rows (odd number): "))
 
 mid = n // 2 + 1   # middle row
@@ -100,8 +100,9 @@ for row in range(1, n+1):
             print("*", end=" ")
     print()
 
-
 '''
+'''
+
 print("\nPattern - 6")
 for row in range(n):
     for col in range(n):
@@ -180,7 +181,7 @@ for row in range(n+1):
     print() 
 
 
-print("\Floyd’s Triangle - Pattern - 16")
+print("\nFloyd’s Triangle - Pattern - 16")
 nums = 1
 for row in range(n):
     for num in range(row + 1):
@@ -205,7 +206,7 @@ for row in range(1,n):
         print(col, end=" ")
     print()
 
-'''
+
 Diamond pattern:
    *
   * *
@@ -247,3 +248,88 @@ Checkerboard pattern:
  * * * *
 
 '''
+
+'''
+class Student:
+    totalStudents = 0
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Student.totalStudents += 1
+    
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+
+    @classmethod
+    def get_total_students(cls):
+        print(f"Total Students: {Student.totalStudents}")
+
+    @staticmethod
+    def is_eligible(age):
+        return 18 >= age <= 35 
+
+
+# s1 = Student(input("Enter the Student Name: ").capitalize(), int(input("Enter the Age: ")))
+# s2 = Student(input("Enter the Student Name: ").capitalize(), int(input("Enter the Age: ")))
+
+s1 = Student("Manikanta", 21)
+s2 = Student("Aditya", 22)
+
+s1.display()
+Student.get_total_students()
+print(Student.is_eligible(26))
+'''
+
+'''
+class Book:
+    def __init__(self, BookName, BookAuthor, Price):
+        self.name = BookName
+        self.author = BookAuthor
+        self.price = Price
+    
+    def display_info(self):
+        print(f"Title: {self.name} \nAuthor: {self.author} \nPrice: ₹{self.price}")
+
+# title = input("Enter the Book Title: ").capitalize()
+# author = input("Enter the Author of Book: ").capitalize()
+# price = int(input("Enter the Book price: "))
+
+# b1 = Book(title, author, price)
+b1 = Book("Chandramukhi", "VenkataPathiRaja", 299)
+b1.display_info()
+
+'''
+
+class Account:
+    def __init__(self, account_holder, pin):
+        self.account_holder = account_holder
+        self._balance = 0
+        self.__pin = pin
+    
+    def deposit(self, amount):
+        self.amount = amount
+        print(f"Deposited ₹{self.amount}")
+        self._balance += self.amount
+    
+    def withdraw(self, pin, amount):
+        self.pin = pin
+        self.amount = amount
+        if self.__pin == self.pin:
+            if self.amount <= self._balance:
+                print(f"Withdraw ₹{self.amount}")
+                self._balance -= self.amount
+        else:
+            print("Incorrect PIN")
+        
+    def show_balance(self):
+        print(f"Avaiable Balance: ₹{self._balance}")
+
+acc = Account("Ravi", 1234)
+acc.deposit(5000)
+acc.withdraw(1234, 1500)
+acc.show_balance()
+
+acc1 = Account(input("Enter Account Holder Name: "), int(input("Enter a 4 digit pin: ")))
+acc1.deposit(int(input("Enter Deposit Amount: ")))
+acc1.withdraw(int(input("Enter Your pin:")), int(input("Enter Withdraw Amount: ")))
+acc1.show_balance()
