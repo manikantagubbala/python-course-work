@@ -21,7 +21,7 @@ print(f'{id}\n')
 # Convert a 1D array of numbers from 1 to 12 into a 3×4 matrix.
 arr = np.arange(1,13,1)
 reshape_arr = arr.reshape(3,4)
-print(f'{reshape_arr}\n')
+print(f'Arrange: {reshape_arr}\n')
 
 # 5.Element-wise Operations 
 # Create two NumPy arrays [1,2,3] and [4,5,6]. Perform element-wise addition, subtraction, multiplication, and division.

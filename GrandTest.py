@@ -474,7 +474,6 @@ while 0 in l:
     l.remove(0)
 print(l)
 
-'''
 
 sen = "a b a"
 result = {}
@@ -482,3 +481,103 @@ for i in sen:
     if i not in result and i != " ":
         result[i] = sen.count(i)
 print(result)
+
+'''
+
+########
+
+'''
+
+import matplotlib.pyplot as plt
+
+months = ['Jan', 'Feb', "Mar", 'Apr']
+days = [31, 28, 31, 30]
+
+plt.bar(months, days)
+plt.xlabel("Months Of the Year")
+plt.ylabel("Days in a Month")
+plt.show()
+
+
+import numpy as np
+
+matrixA = np.array([[1,2],[3,4]])
+matrixB = np.array([[5,6],[7,8]])
+print(np.dot(matrixA, matrixB))
+
+import numpy as np
+
+matrixA = np.array([[int(input("Enter 1st Num: ")),int(input("Enter 2th Num: "))],[int(input("Enter 3rd Num: ")),int(input("Enter 4th Num: "))]])
+matrixB = np.array([[int(input("Enter 5th Num: ")),int(input("Enter 6th Num: "))],[int(input("Enter 7th Num: ")),int(input("Enter 8th Num: "))]])
+print(np.dot(matrixA, matrixB))
+
+
+import numpy as np
+import random
+arr = np.random.randint(1,100,10)
+#arr = [12, 45, 67, 89, 23, 10, 78, 34, 56, 90]
+result = np.array(arr)
+print(f"Mean: {np.mean(result)}")
+print(f"Median: {np.median(result)}")
+print(f"Standard Deviation: {np.std(result)}")
+
+
+try:
+    print(10/0)
+except Exception as e:
+    print(e)
+    
+
+
+mylist = [12,45,54,3]
+index = 5
+try:
+    print(mylist[index])
+except Exception as e:
+    print(e)
+
+'''
+###########
+
+'''
+import math
+def Circle(r):
+    area = math.pi * (r**2)
+    circum = 2*math.pi*r
+    print(f"({area:.2f}, {circum:.2f})")
+Circle(7)
+
+
+
+import random
+def random_team(mem, size):
+    result = random.choices(mem, k=size) 
+    print(result)
+mem = ['Alice', 'Bob', 'Charlie', 'David']
+size = 2
+random_team(mem, size)
+
+
+num = [36, 42, 39, 45, 41]
+result = list(filter(lambda i: i>40, num))
+print(result)
+
+
+def reverse_num(n):
+    if n == 0:
+        return n
+    digit = n % 10
+    print(digit, end="")
+    reverse_num(n//10)
+reverse_num(450)
+
+
+
+def sum_of_digit(n):
+    if n==0:
+        return 0
+    digit = n%10
+    return digit + sum_of_digit(n//10)
+print(sum_of_digit(1234))
+
+'''
