@@ -402,6 +402,7 @@ p3 = p1 + p2
 p3.display()
 '''
 
+'''
 from abc import ABC, abstractmethod
 
 class Notification(ABC):
@@ -422,3 +423,62 @@ e = EmailNotification()
 s = SMSNotification()
 e.send()
 s.send()
+'''
+
+'''
+# Input: 17-07-2025
+day, month, year = input("Enter the Date: ").split("-")
+print(f"{year}/{month}/{day}")
+
+
+
+word = input("Enter the Word: ").lower()
+change_vowels = word.translate(str.maketrans('aeoiu','*****'))
+print(change_vowels)
+
+
+in_put = list(map(float,input("Enter the values:  ").split()))
+print(sum(in_put))
+print(max(in_put))
+
+
+names = "Ravi,Asha,Asha,John".split(",")
+sorted_names = list(sorted(set(names)))
+print(sorted_names)
+
+
+
+n = 3
+data ={}
+max_val = 0
+res_name = ''
+for i in range(n):
+    name, marks = input("Enter the Name and marks: ").split()
+    marks = int(marks)
+    if marks > max_val:
+        max_val = marks
+        res_name = name
+    data[name] = marks
+
+print(data)
+print(res_name)
+
+
+sen = "hello world".split()
+for i in sen:
+    print(i[::-1], end=" ")
+
+
+l = [1,2,3,0,0,3,9,0,5,6,4]
+while 0 in l:
+    l.remove(0)
+print(l)
+
+'''
+
+sen = "a b a"
+result = {}
+for i in sen: 
+    if i not in result and i != " ":
+        result[i] = sen.count(i)
+print(result)
